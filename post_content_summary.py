@@ -8,10 +8,12 @@ import time
 import random
 import shutil
 from huggingface_hub import InferenceClient
+from dotenv import load_dotenv
 
 from login import login_and_get_context
 
 # --- HF Setup ---
+load_dotenv()
 HF_TOKEN = os.getenv("HF_TOKEN")
 
 if not HF_TOKEN:
