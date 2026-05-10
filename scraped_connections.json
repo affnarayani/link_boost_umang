@@ -64,7 +64,8 @@
     {
         "name": "Aman Vijay",
         "link": "https://www.linkedin.com/in/aman-vijay-36bbaa219/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-10 15:32:51"
     },
     {
         "name": "kundan kumar",
