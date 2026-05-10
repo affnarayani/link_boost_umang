@@ -22,12 +22,14 @@
     {
         "name": "Adv. Sneha Ranjan",
         "link": "https://www.linkedin.com/in/adv-sneha-ranjan-41a8681b8/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-10 08:48:32"
     },
     {
         "name": "Anupriya Sahay",
         "link": "https://www.linkedin.com/in/anupriya-sahay-aa19a9240/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-10 08:49:01"
     },
     {
         "name": "Adv. Kumar Ashish",
