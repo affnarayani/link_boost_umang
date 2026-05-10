@@ -1,0 +1,9 @@
+0 - encrypt.py - Runs locally
+1 - login.py - Supports other scripts
+2 - get_info.py - Runs 1st of every month 3 AM IST
+3 - scrape_connections.py - Runs 1st of every month 9 AM IST
+4 - make_connections.py - Runs 1 AM, 5 AM, 9 AM, 1 PM, 5 PM, 9 PM IST everyday excluding 1st of every month
+5 - withdraw_connections.py - Runs 2 AM, 6 AM, 10 AM, 2 PM, 6 PM, 10 PM IST everyday excluding 1st of every month
+6 - like_comment.py - Runs 3 AM, 7 AM, 11 AM, 3 PM, 7 PM 11 PM IST everyday excluding 1st of every month
+7 - post_content.py - Runs 8 AM, 4 PM, 8 PM IST everyday excluding 1st of every month
+8 - logout.py - Runs manually

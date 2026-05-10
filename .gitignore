@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.log
+
+# Virtual environment
+.venv/
+
+# Environment files
+.env
+.env.*
+
+# Editors/IDEs
+.vscode/
+.idea/
+
+# Playwright artifacts
+.playwright/
+
+# Zencoder
+.zencoder/
+
+# Data files
+cookies.json
+encrypt.py
