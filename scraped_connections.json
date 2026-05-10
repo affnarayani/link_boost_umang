@@ -34,7 +34,8 @@
     {
         "name": "Adv. Kumar Ashish",
         "link": "https://www.linkedin.com/in/adv-kumar-ashish-59283322b/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-10 11:30:12"
     },
     {
         "name": "Aman Kumar",
