@@ -56,7 +56,8 @@ def save_to_json_top(new_link):
 def generate_ai_comment(content):
     try:
         prompt = (
-           f"Understand the content and write a 30-word viral-style comment that feels human, adds a strong perspective, and is engaging enough to attract replies or reactions."
+            f"Understand the sentiment, context, and intent of the content first and then write a 30-word viral-style comment that feels human, adds a strong perspective, and is engaging enough to attract replies or reactions."
+            f"Do not sound argumentative, interrogative, overly intense, or controversial unless the post itself has that tone.\n"
             f"Comment only, no quotes, no asterisks, no prefix.\nContent: {content}"
         )
 
@@ -210,8 +211,8 @@ def extract_single_new_share_link():
                 # =========================
                 print("[ACTION] Checking Like state...", flush=True)
 
-                not_liked_btn = new_tab.get_by_label('Reaction button state: no')
-                liked_btn = new_tab.get_by_role('button', name='Reaction button state: Like')
+                not_liked_btn = new_tab.get_by_role('button', name='React Like', exact=True)
+                liked_btn = new_tab.get_by_role('button', name='Unreact Like')
 
                 if not_liked_btn.count() > 0 and not_liked_btn.first.is_visible():
                     print("[INFO] Not liked → liking", flush=True)
@@ -242,8 +243,9 @@ def extract_single_new_share_link():
                     time.sleep(5)
 
                     # 2. Focus editor
-                    comment_box = new_tab.get_by_test_id(
-                        'ui-core-tiptap-text-editor-wrapper'
+                    comment_box = new_tab.get_by_role(
+                        'textbox',
+                        name='Text editor for creating'
                     ).get_by_role('paragraph')
 
                     if not comment_box.is_visible():
@@ -262,16 +264,16 @@ def extract_single_new_share_link():
                     time.sleep(5)
 
                     # 4. Click POST button
-                    post_btn = new_tab.get_by_role('button', name='Comment', exact=True).nth(1)
+                    for _ in range(3):
+                        new_tab.keyboard.press("Tab")
+                        time.sleep(2)
 
-                    if post_btn.count() == 0 or not post_btn.is_visible():
-                        print("[FAIL] Post button not found", flush=True)
-                        sys.exit(1)
+                    time.sleep(2)
+                    new_tab.keyboard.press("Enter")
 
-                    post_btn.click()
                     print("[SUCCESS] Comment posted.", flush=True)
 
-                    time.sleep(5)
+                    time.sleep(30)
 
                 except Exception as e:
                     print(f"[FAIL] Comment failed: {e}", flush=True)
