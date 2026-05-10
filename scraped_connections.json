@@ -70,7 +70,8 @@
     {
         "name": "kundan kumar",
         "link": "https://www.linkedin.com/in/kundan-kumar-7aa4b41b2/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-10 15:40:47"
     },
     {
         "name": "Adv komal garg choudhary",
