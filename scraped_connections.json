@@ -76,12 +76,14 @@
     {
         "name": "Adv komal garg choudhary",
         "link": "https://www.linkedin.com/in/adv-komal-garg-choudhary-920115317/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-10 17:12:13"
     },
     {
         "name": "sristy patel",
         "link": "https://www.linkedin.com/in/sristy-patel-8138771b9/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-10 17:12:39"
     },
     {
         "name": "Muskan Singh",
