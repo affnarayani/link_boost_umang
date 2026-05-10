@@ -84,7 +84,7 @@ def rewrite_with_hf(text):
                 return sanitize_ai_content(text)
 
 
-def random_delay(step_name, min_s=5, max_s=15):
+def random_delay(step_name, min_s=10, max_s=20):
     delay = random.uniform(min_s, max_s)
     print(f"[STEP] {step_name} | Waiting {delay:.2f}s", flush=True)
     time.sleep(delay)
