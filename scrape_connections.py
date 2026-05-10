@@ -3,6 +3,7 @@ import re
 import time
 import random
 import sys
+import os
 from login import login_and_get_context
 
 # --- Configuration ---
@@ -10,127 +11,214 @@ TARGET_URL = f"https://www.linkedin.com/search/results/people/?geoUrn=%5B%221135
 OUTPUT_FILE = "scraped_connections.json"
 # ---------------------
 
+
+def save_to_json(data):
+    """
+    Save scraped data instantly after every profile.
+    """
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(
+            data,
+            f,
+            indent=4,
+            ensure_ascii=False
+        )
+
+
 def scrape_connections():
+
     pw, browser, context, page = login_and_get_context()
+
     all_scraped_data = []
+    processed_links = set()
 
     try:
+
+        # -----------------------------------
+        # CLEAR JSON AT START
+        # -----------------------------------
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+            json.dump([], f, indent=4)
+
+        print("Previous JSON cleared.", flush=True)
+
         print(f"Navigating to: {TARGET_URL}", flush=True)
+
         page.goto(TARGET_URL, wait_until="load")
-        
+
+        page.wait_for_timeout(5000)
+
         while True:
+
             print("Waiting for page to settle.", flush=True)
-            time.sleep(random.uniform(15, 30)) 
 
-            # --- 1. SET CONTEXT ---
-            iframe_locator = page.locator('[data-testid="interop-iframe"]')
-            if iframe_locator.count() > 0:
-                target_frame = iframe_locator.content_frame
-                main_context = target_frame.get_by_role('main')
-            else:
-                target_frame = page
-                main_context = page.get_by_role('main')
+            time.sleep(random.uniform(5, 10))
 
-            # --- 2. MULTI-METHOD SCROLL (Fix for Lazy Loading) ---
-            print("Scrolling to the bottom using multiple methods...", flush=True)
-            time.sleep(random.uniform(15, 30)) 
-            
-            # Method A: Mouse Scroll (Mimics human behavior)
-            for _ in range(5):
-                page.mouse.wheel(0, 1000)
-                time.sleep(0.5)
+            # -----------------------------------
+            # SCROLL PAGE
+            # -----------------------------------
+            print("Scrolling page...", flush=True)
 
-            # Method B: JavaScript Scroll inside Iframe
+            for _ in range(6):
+                page.mouse.wheel(0, 2000)
+                time.sleep(1)
+
             try:
-                target_frame.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-            except: pass
-            
-            # Method C: Scroll to the last profile found
-            try:
-                last_profile = main_context.locator(".search-results-container a[aria-label^='View ']").last
-                if last_profile.count() > 0:
-                    last_profile.scroll_into_view_if_needed()
-            except: pass
-            
-            time.sleep(3) # Wait for buttons to render
+                page.evaluate(
+                    "window.scrollTo(0, document.body.scrollHeight)"
+                )
+            except:
+                pass
 
-            # --- 3. SCRAPING LOGIC ---
-            container_selector = '.search-results-container'
-            profile_links = main_context.locator(f"{container_selector} a[aria-label^='View ']").all()
-            
-            if not profile_links:
-                profile_links = main_context.locator(f"a:has-text('View ')").all()
+            time.sleep(5)
 
-            print(f"Status: Found {len(profile_links)} profiles on this page.", flush=True)
+            # -----------------------------------
+            # FIND CONNECT BUTTONS
+            # -----------------------------------
+            invite_buttons = page.get_by_role(
+                "link",
+                name=re.compile(r"Invite .* to connect", re.I)
+            ).all()
 
-            for link_locator in profile_links:
+            print(
+                f"Status: Found {len(invite_buttons)} connect buttons on this page.",
+                flush=True
+            )
+
+            # -----------------------------------
+            # PROCESS EACH PROFILE
+            # -----------------------------------
+            for invite_btn in invite_buttons:
+
                 try:
-                    raw_label = link_locator.get_attribute("aria-label") or ""
-                    raw_text = link_locator.inner_text() or ""
-                    combined = f"{raw_label} {raw_text}".strip()
-                    
-                    match = re.search(r"View\s+(.+?)(?:'s|’s| profile)", combined, re.IGNORECASE)
-                    name = match.group(1).strip() if match else combined.replace("View ", "").split("'s")[0].split("’s")[0].strip()
 
-                    invite_btn = main_context.get_by_role('button', name=f"Invite {name}")
-                    
-                    if invite_btn.count() > 0:
-                        profile_url = link_locator.get_attribute("href")
-                        if profile_url and not profile_url.startswith("http"):
-                            profile_url = f"https://www.linkedin.com{profile_url}"
+                    aria_label = (
+                        invite_btn.get_attribute("aria-label") or ""
+                    ).strip()
 
-                        all_scraped_data.append({
-                            "name": name,
-                            "link": profile_url,
-                            "invited": False
-                        })
-                except: continue
+                    match = re.search(
+                        r"Invite\s+(.*?)\s+to connect",
+                        aria_label,
+                        re.I
+                    )
 
-            # --- 4. PAGINATION LOGIC ---
-            pagination_text_locator = main_context.get_by_text(re.compile(r"Page \d+ of \d+", re.IGNORECASE))
-            
-            if pagination_text_locator.count() > 0:
-                full_text = pagination_text_locator.first.inner_text()
-                page_match = re.search(r"Page (\d+) of (\d+)", full_text, re.IGNORECASE)
-                
-                if page_match:
-                    current_page = int(page_match.group(1))
-                    total_pages = int(page_match.group(2))
-                    print(f"Status: Page {current_page} of {total_pages} processed.", flush=True)
+                    if not match:
+                        continue
 
-                    if current_page < total_pages:
-                        next_button = main_context.get_by_role('button', name='Next')
-                        
-                        if next_button.count() > 0:
-                            print("Next button found. Clicking...", flush=True)
-                            next_button.scroll_into_view_if_needed() # Final check
-                            next_button.click()
-                            page.wait_for_load_state("load")
-                        else:
-                            print("Next button not found physically. Ending.", flush=True)
-                            break
-                    else:
-                        print("Reached final page.", flush=True)
-                        break
-                else: break
-            else:
-                print("Pagination text not found. Ending.", flush=True)
+                    name = match.group(1).strip()
+
+                    # -----------------------------------
+                    # FIND PROFILE LINK
+                    # -----------------------------------
+                    profile_link_locator = page.get_by_role(
+                        "link",
+                        name=re.compile(re.escape(name), re.I)
+                    ).first
+
+                    if profile_link_locator.count() == 0:
+                        print(
+                            f"Profile link not found for: {name}",
+                            flush=True
+                        )
+                        continue
+
+                    profile_url = profile_link_locator.get_attribute("href")
+
+                    if not profile_url:
+                        continue
+
+                    # Make full LinkedIn URL
+                    if profile_url.startswith("/"):
+                        profile_url = f"https://www.linkedin.com{profile_url}"
+
+                    # Remove tracking params
+                    profile_url = profile_url.split("?")[0]
+
+                    # Validate LinkedIn profile URL
+                    if "/in/" not in profile_url:
+                        continue
+
+                    # Skip duplicates
+                    if profile_url in processed_links:
+                        continue
+
+                    processed_links.add(profile_url)
+
+                    profile_data = {
+                        "name": name,
+                        "link": profile_url,
+                        "invited": False
+                    }
+
+                    all_scraped_data.append(profile_data)
+
+                    # -----------------------------------
+                    # SAVE INSTANTLY
+                    # -----------------------------------
+                    save_to_json(all_scraped_data)
+
+                    print(f"Saved instantly: {name}", flush=True)
+
+                except Exception as e:
+                    print(
+                        f"Profile processing error: {e}",
+                        flush=True
+                    )
+                    continue
+
+            # -----------------------------------
+            # NEXT BUTTON
+            # -----------------------------------
+            try:
+
+                next_button = page.get_by_test_id(
+                    "pagination-controls-next-button-visible"
+                )
+
+                if next_button.count() == 0:
+                    print("Next button not found. Ending.", flush=True)
+                    break
+
+                is_disabled = next_button.get_attribute("disabled")
+
+                if is_disabled is not None:
+                    print("Reached final page.", flush=True)
+                    break
+
+                print("Clicking next page...", flush=True)
+
+                next_button.scroll_into_view_if_needed()
+
+                time.sleep(random.uniform(2, 4))
+
+                next_button.click()
+
+                page.wait_for_load_state("load")
+
+                page.wait_for_timeout(
+                    random.randint(4000, 7000)
+                )
+
+            except Exception as e:
+                print(f"Pagination error: {e}", flush=True)
                 break
 
-        # 5. Final Save
-        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-            json.dump(all_scraped_data, f, indent=4)
-        
-        print(f"Process Finished. Total {len(all_scraped_data)} profiles saved to {OUTPUT_FILE}", flush=True)
+        print(
+            f"Process Finished. Total {len(all_scraped_data)} profiles saved.",
+            flush=True
+        )
 
     except Exception as e:
         print(f"Scraping Error: {e}", flush=True)
         sys.exit(1)
+
     finally:
         try:
             browser.close()
             pw.stop()
-        except: pass
+        except:
+            pass
+
 
 if __name__ == "__main__":
     scrape_connections()
