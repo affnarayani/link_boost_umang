@@ -57,6 +57,8 @@ def generate_ai_comment(content):
     try:
         prompt = (
             f"Understand the sentiment, context, and intent of the content first and then write a 30-word viral-style comment that feels human, adds a strong perspective, and is engaging enough to attract replies or reactions."
+            f"Do not sound argumentative, interrogative, overly intense, or controversial unless the post itself has that tone."
+            f"If the post is about a job opening or hiring opportunity, write the comment in a way that sounds genuinely interested in the opportunity and curious to learn more."
             f"Comment only, no quotes, no asterisks, no prefix.\nContent: {content}"
         )
 
