@@ -172,7 +172,8 @@
     {
         "name": "Saumya Sinha",
         "link": "https://www.linkedin.com/in/saumya-sinha-8a717a1aa/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-11 17:31:27"
     },
     {
         "name": "Dikshaa Raj",
