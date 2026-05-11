@@ -166,7 +166,8 @@
     {
         "name": "Rajit Ranjan",
         "link": "https://www.linkedin.com/in/rajit-ranjan-047086246/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-11 16:13:09"
     },
     {
         "name": "Saumya Sinha",
