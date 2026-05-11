@@ -184,12 +184,14 @@
     {
         "name": "Nidhi Rai",
         "link": "https://www.linkedin.com/in/nidhi-rai-38a501209/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-11 20:52:05"
     },
     {
         "name": "Ashutosh Ranjan",
         "link": "https://www.linkedin.com/in/ashutosh-ranjan-aa1132201/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-11 20:52:38"
     },
     {
         "name": "Niraj Kumar Singh",
