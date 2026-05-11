@@ -178,7 +178,8 @@
     {
         "name": "Dikshaa Raj",
         "link": "https://www.linkedin.com/in/dikshaa-raj-32ab911aa/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-11 20:14:22"
     },
     {
         "name": "Nidhi Rai",
