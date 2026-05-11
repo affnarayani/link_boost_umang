@@ -154,7 +154,8 @@
     {
         "name": "Sahil Kumar",
         "link": "https://www.linkedin.com/in/sahil-kumar-015bb8301/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-11 13:25:36"
     },
     {
         "name": "Shanu Mishra",
