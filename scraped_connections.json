@@ -304,7 +304,8 @@
     {
         "name": "Vishal Kumar Chauhan",
         "link": "https://www.linkedin.com/in/vishal-kumar-chauhan-18547a309/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-12 19:22:23"
     },
     {
         "name": "Isshan Siingh",
