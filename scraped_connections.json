@@ -250,7 +250,8 @@
     {
         "name": "Stuti Ranjan",
         "link": "https://www.linkedin.com/in/stuti-ranjan-282755204/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-12 11:06:56"
     },
     {
         "name": "Mallika Kumari",
