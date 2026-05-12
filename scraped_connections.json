@@ -310,7 +310,8 @@
     {
         "name": "Isshan Siingh",
         "link": "https://www.linkedin.com/in/isshan-siingh-a26276135/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-12 20:13:59"
     },
     {
         "name": "TUSHAR SHRIDHAR",
