@@ -340,7 +340,8 @@
     {
         "name": "Dipti Sinha",
         "link": "https://www.linkedin.com/in/dipti-sinha-7ab9431aa/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-12 23:56:16"
     },
     {
         "name": "Aneemesh .",
