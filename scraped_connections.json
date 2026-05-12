@@ -262,12 +262,14 @@
     {
         "name": "Vandna Rani",
         "link": "https://www.linkedin.com/in/vandna-rani-0977981b8/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-12 13:21:45"
     },
     {
         "name": "shalini karn",
         "link": "https://www.linkedin.com/in/shalini-karn-784460292/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-12 13:22:13"
     },
     {
         "name": "Noumaan Ahmad, Adv",
