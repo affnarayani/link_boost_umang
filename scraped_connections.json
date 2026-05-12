@@ -298,7 +298,8 @@
     {
         "name": "Parishmita Bora Choudhary",
         "link": "https://www.linkedin.com/in/parishmita-bora-choudhary-13a5b5379/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-12 18:28:58"
     },
     {
         "name": "Vishal Kumar Chauhan",
