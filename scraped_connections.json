@@ -280,7 +280,8 @@
     {
         "name": "Keshav Narayan Shandilya",
         "link": "https://www.linkedin.com/in/kn-for-you/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-12 15:47:55"
     },
     {
         "name": "Singh Dharmesh Anand",
