@@ -256,7 +256,8 @@
     {
         "name": "Mallika Kumari",
         "link": "https://www.linkedin.com/in/mallika-kumari-b77b18262/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-12 11:38:44"
     },
     {
         "name": "Vandna Rani",
