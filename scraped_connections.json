@@ -316,12 +316,14 @@
     {
         "name": "TUSHAR SHRIDHAR",
         "link": "https://www.linkedin.com/in/tushar-shridhar-885453218/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-12 20:22:16"
     },
     {
         "name": "Adv Trisandhyaa",
         "link": "https://www.linkedin.com/in/adv-trisandhyaa-23a466295/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-12 20:22:42"
     },
     {
         "name": "Abhiraj Pujan",
