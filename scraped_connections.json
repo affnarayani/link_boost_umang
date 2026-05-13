@@ -382,7 +382,8 @@
     {
         "name": "Avantika Singh",
         "link": "https://www.linkedin.com/in/avantika-singh-538b58201/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-13 11:35:05"
     },
     {
         "name": "Abinash Narayan",
