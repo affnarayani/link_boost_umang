@@ -358,7 +358,8 @@
     {
         "name": "Kaushiki Ranjan",
         "link": "https://www.linkedin.com/in/kaushiki-ranjan-81339431a/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-13 08:16:18"
     },
     {
         "name": "MANJEET BISHEN",
