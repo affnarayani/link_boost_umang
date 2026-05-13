@@ -364,12 +364,14 @@
     {
         "name": "MANJEET BISHEN",
         "link": "https://www.linkedin.com/in/manjeet-bishen-209330277/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-13 08:28:20"
     },
     {
         "name": "Advocate Dipti Kumari",
         "link": "https://www.linkedin.com/in/advocate-dipti-kumari-b34b9029b/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-13 08:28:50"
     },
     {
         "name": "Sona Kaushiki",
