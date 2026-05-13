@@ -442,7 +442,8 @@
     {
         "name": "Zainab Madarwala",
         "link": "https://www.linkedin.com/in/zainab-madarwala-220b55365/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-13 18:24:04"
     },
     {
         "name": "Ayush .",
