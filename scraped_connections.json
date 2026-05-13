@@ -454,7 +454,8 @@
     {
         "name": "Tejaskar Anand",
         "link": "https://www.linkedin.com/in/tejaskar-anand-a86056243/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-13 21:43:56"
     },
     {
         "name": "Waquar Ahmad",
