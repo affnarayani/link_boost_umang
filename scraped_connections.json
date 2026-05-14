@@ -502,7 +502,8 @@
     {
         "name": "siddharth shankar pandey",
         "link": "https://www.linkedin.com/in/siddharth-shankar-pandey-b55b14b9/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-14 10:42:51"
     },
     {
         "name": "Poonam Singh",
