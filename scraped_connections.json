@@ -520,12 +520,14 @@
     {
         "name": "Adv Shubham Raj",
         "link": "https://www.linkedin.com/in/adv-shubham-raj-5a2a04375/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-14 15:12:48"
     },
     {
         "name": "Kiran Kumari",
         "link": "https://www.linkedin.com/in/kiran-kumari-1564a8337/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-14 15:13:16"
     },
     {
         "name": "Nadim Akram",
