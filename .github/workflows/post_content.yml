@@ -3,7 +3,7 @@ name: Post LinkedIn Content
 on:
   schedule:
     # 8 AM, 8 PM IST everyday excluding 1st of every month
-    - cron: '52 17 * * *'
+    - cron: '27 17 * * *'
   workflow_dispatch: {}
 
 env:
