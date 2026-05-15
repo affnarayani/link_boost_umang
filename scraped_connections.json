@@ -622,7 +622,8 @@
     {
         "name": "Ujjawal Raj",
         "link": "https://www.linkedin.com/in/ujjawal-raj-854a19203/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-15 15:09:43"
     },
     {
         "name": "Saurabh Singh",
