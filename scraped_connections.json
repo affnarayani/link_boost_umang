@@ -658,7 +658,8 @@
     {
         "name": "Vishwas Kumar",
         "link": "https://www.linkedin.com/in/vishwas-kumar-355615300/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-15 20:16:24"
     },
     {
         "name": "Rohit Singh",
