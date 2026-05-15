@@ -592,7 +592,8 @@
     {
         "name": "Riya Kumari",
         "link": "https://www.linkedin.com/in/riya-kumari-55a9a3329/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-15 09:52:53"
     },
     {
         "name": "Gaurav Prakash",
