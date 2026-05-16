@@ -736,7 +736,8 @@
     {
         "name": "AVINASH RAJ",
         "link": "https://www.linkedin.com/in/avinash-raj-b08980235/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-16 10:50:31"
     },
     {
         "name": "Adv Rashmi Sharma",
