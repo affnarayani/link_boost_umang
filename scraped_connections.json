@@ -718,7 +718,8 @@
     {
         "name": "Megha Singh",
         "link": "https://www.linkedin.com/in/megha-singh-543439208/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-16 09:52:47"
     },
     {
         "name": "Anshu Kumar (Pandey)",
