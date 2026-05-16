@@ -784,7 +784,8 @@
     {
         "name": "Arun Kumar",
         "link": "https://www.linkedin.com/in/arun-kumar-ba984a283/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-16 19:50:31"
     },
     {
         "name": "Akash Deep",
