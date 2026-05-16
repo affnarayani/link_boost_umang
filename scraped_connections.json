@@ -760,7 +760,8 @@
     {
         "name": "Dinesh Srivastav",
         "link": "https://www.linkedin.com/in/dinesh-srivastav-9b42803a3/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-16 14:43:59"
     },
     {
         "name": "chaitanya Swaroop",
