@@ -790,7 +790,8 @@
     {
         "name": "Akash Deep",
         "link": "https://www.linkedin.com/in/akash-deep-724592370/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-16 20:29:45"
     },
     {
         "name": "Ravi Kumar sinha",
