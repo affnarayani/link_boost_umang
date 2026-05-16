@@ -694,17 +694,20 @@
     {
         "name": "Puja Kumari",
         "link": "https://www.linkedin.com/in/voiceofpuja/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-16 08:30:49"
     },
     {
         "name": "Sweta Ranjan",
         "link": "https://www.linkedin.com/in/sweta-ranjan-919723228/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-16 08:31:24"
     },
     {
         "name": "Amrit Kumar",
         "link": "https://www.linkedin.com/in/amrit-kumar-558365259/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-16 08:31:55"
     },
     {
         "name": "Rahul Singh",
