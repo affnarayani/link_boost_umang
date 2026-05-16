@@ -748,7 +748,8 @@
     {
         "name": "Ravi Kumar",
         "link": "https://www.linkedin.com/in/ravi-kumar-514934314/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-16 14:21:55"
     },
     {
         "name": "Rajesh K Sinha",
