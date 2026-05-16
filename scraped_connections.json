@@ -688,7 +688,8 @@
     {
         "name": "Ankit Kumar Singh",
         "link": "https://www.linkedin.com/in/ankit-kumar-singh-482b6a282/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-16 07:35:08"
     },
     {
         "name": "Puja Kumari",
