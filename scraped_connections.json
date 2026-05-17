@@ -115,7 +115,8 @@
         "name": "Suhani Singh",
         "link": "https://www.linkedin.com/in/suhani-singh-134b86203/",
         "invited": true,
-        "timestamp": "2026-05-10 22:33:50"
+        "timestamp": "2026-05-10 22:33:50",
+        "withdraw": false
     },
     {
         "name": "Ankesh Bibhu",
