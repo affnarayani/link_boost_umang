@@ -874,7 +874,8 @@
     {
         "name": "Adv. Aishwarya Sudhir",
         "link": "https://www.linkedin.com/in/adv-aishwarya-sudhir-a710291b2/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-17 15:33:24"
     },
     {
         "name": "subhash yadav",
