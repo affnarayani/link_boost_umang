@@ -828,7 +828,8 @@
     {
         "name": "Vasudha Sinha",
         "link": "https://www.linkedin.com/in/vasudha-sinha-298233331/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-17 10:51:48"
     },
     {
         "name": "shiw Kumar Prabhakar",
