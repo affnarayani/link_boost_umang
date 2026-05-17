@@ -852,7 +852,8 @@
     {
         "name": "SHAKTI GAURAV",
         "link": "https://www.linkedin.com/in/shakti-gaurav-939594206/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-17 12:00:26"
     },
     {
         "name": "Asit kumar",
