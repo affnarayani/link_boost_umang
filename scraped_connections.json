@@ -808,7 +808,8 @@
     {
         "name": "Priti Kumari",
         "link": "https://www.linkedin.com/in/priti-kumari-5972b1363/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-17 07:29:47"
     },
     {
         "name": "Vijay Kumar Singh",
