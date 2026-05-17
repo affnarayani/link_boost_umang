@@ -814,7 +814,8 @@
     {
         "name": "Vijay Kumar Singh",
         "link": "https://www.linkedin.com/in/vijay-kumar-singh-157222230/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-17 07:40:10"
     },
     {
         "name": "Prashant Kumar and Associates",
