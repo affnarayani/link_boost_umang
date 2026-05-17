@@ -840,7 +840,8 @@
     {
         "name": "Bimlesh kumar Jha",
         "link": "https://www.linkedin.com/in/bimlesh-kumar-jha-6b27371b0/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-17 11:34:16"
     },
     {
         "name": "Adv Divya",
