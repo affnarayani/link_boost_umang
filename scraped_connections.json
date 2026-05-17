@@ -59,7 +59,8 @@
         "name": "Rahul Raj",
         "link": "https://www.linkedin.com/in/rahul-raj-9708a42a3/",
         "invited": true,
-        "timestamp": "2026-05-10 12:45:06"
+        "timestamp": "2026-05-10 12:45:06",
+        "withdraw": false
     },
     {
         "name": "ASHISH Singh",
