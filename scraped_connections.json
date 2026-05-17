@@ -896,7 +896,8 @@
     {
         "name": "Abhinav Anand",
         "link": "https://www.linkedin.com/in/abhinav-anand-6185553a8/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-17 18:35:32"
     },
     {
         "name": "Atul Kumar",
