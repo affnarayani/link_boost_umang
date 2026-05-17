@@ -94,7 +94,8 @@
         "name": "sristy patel",
         "link": "https://www.linkedin.com/in/sristy-patel-8138771b9/",
         "invited": true,
-        "timestamp": "2026-05-10 17:12:39"
+        "timestamp": "2026-05-10 17:12:39",
+        "withdraw": false
     },
     {
         "name": "Muskan Singh",
