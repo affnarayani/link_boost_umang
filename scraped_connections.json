@@ -948,7 +948,8 @@
     {
         "name": "akshat das",
         "link": "https://www.linkedin.com/in/akshat-das-6b4575234/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-18 12:19:17"
     },
     {
         "name": "Shiv Pratap",
