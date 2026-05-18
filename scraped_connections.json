@@ -150,7 +150,8 @@
         "name": "ADVOCATE RAGHUBIR KUMAR",
         "link": "https://www.linkedin.com/in/advocate-raghubir-kumar-75a8462b6/",
         "invited": true,
-        "timestamp": "2026-05-11 10:27:59"
+        "timestamp": "2026-05-11 10:27:59",
+        "withdraw": false
     },
     {
         "name": "Onkar Dutt Gautam",
