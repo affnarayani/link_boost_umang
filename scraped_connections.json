@@ -185,7 +185,8 @@
         "name": "Shanu Mishra",
         "link": "https://www.linkedin.com/in/shanu-mishra-b36408293/",
         "invited": true,
-        "timestamp": "2026-05-11 15:52:25"
+        "timestamp": "2026-05-11 15:52:25",
+        "withdraw": false
     },
     {
         "name": "Rajit Ranjan",
