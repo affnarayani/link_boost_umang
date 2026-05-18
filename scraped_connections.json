@@ -964,7 +964,8 @@
     {
         "name": "Adv. Vaibhav Kumar",
         "link": "https://www.linkedin.com/in/adv-vaibhav-kumar-ba0571342/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-18 16:17:05"
     },
     {
         "name": "Niwas Kumar Advocate",
