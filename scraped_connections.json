@@ -1015,7 +1015,8 @@
     {
         "name": "Vidushi Sanganeria",
         "link": "https://www.linkedin.com/in/vidushi-sanganeria/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-18 21:23:52"
     },
     {
         "name": "Adv. Aman Anand",
