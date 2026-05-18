@@ -977,7 +977,8 @@
     {
         "name": "Samridhi Suman",
         "link": "https://www.linkedin.com/in/samridhi-suman-4875551ab/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-18 17:11:47"
     },
     {
         "name": "Raja Kumar",
