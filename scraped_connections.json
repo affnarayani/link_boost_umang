@@ -1021,7 +1021,8 @@
     {
         "name": "Adv. Aman Anand",
         "link": "https://www.linkedin.com/in/adv-aman-anand-18a9ab23a/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-18 22:35:12"
     },
     {
         "name": "Adv. Subhankar Prabhakar",
