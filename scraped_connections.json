@@ -220,7 +220,8 @@
         "name": "Ashutosh Ranjan",
         "link": "https://www.linkedin.com/in/ashutosh-ranjan-aa1132201/",
         "invited": true,
-        "timestamp": "2026-05-11 20:52:38"
+        "timestamp": "2026-05-11 20:52:38",
+        "withdraw": false
     },
     {
         "name": "Niraj Kumar Singh",
