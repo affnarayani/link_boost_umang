@@ -276,7 +276,8 @@
         "name": "Shashi Ranjan Kumar",
         "link": "https://www.linkedin.com/in/shashi-ranjan-kumar-aa76a4110/",
         "invited": true,
-        "timestamp": "2026-05-12 09:14:46"
+        "timestamp": "2026-05-12 09:14:46",
+        "withdraw": false
     },
     {
         "name": "Ghunghroo Anand",
