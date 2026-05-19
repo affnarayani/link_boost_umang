@@ -1157,7 +1157,8 @@
     {
         "name": "JAGDISH PRASAD SINGH",
         "link": "https://www.linkedin.com/in/jagdish-prasad-singh-59a9721ba/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-19 22:47:56"
     },
     {
         "name": "Aarti Raj",
