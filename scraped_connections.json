@@ -255,7 +255,8 @@
         "name": "Ashwani Raj Narayan",
         "link": "https://www.linkedin.com/in/ashwaniark/",
         "invited": true,
-        "timestamp": "2026-05-11 21:54:25"
+        "timestamp": "2026-05-11 21:54:25",
+        "withdraw": false
     },
     {
         "name": "Praveen Tiwari",
