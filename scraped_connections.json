@@ -241,7 +241,8 @@
         "name": "Baidyanath Sharan",
         "link": "https://www.linkedin.com/in/baidyanath-sharan-848305211/",
         "invited": true,
-        "timestamp": "2026-05-11 21:53:13"
+        "timestamp": "2026-05-11 21:53:13",
+        "withdraw": false
     },
     {
         "name": "Ravi Nandan",
