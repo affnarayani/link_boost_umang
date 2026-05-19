@@ -1075,7 +1075,8 @@
     {
         "name": "Anshita Sidhanta",
         "link": "https://www.linkedin.com/in/anshita-sidhanta-552b90240/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-19 12:18:37"
     },
     {
         "name": "Adv. Amrita (Amme) Kumari",
