@@ -269,7 +269,8 @@
         "name": "Advocate Sumit Kumar",
         "link": "https://www.linkedin.com/in/advocate-sumit-kumar-0a34a9137/",
         "invited": true,
-        "timestamp": "2026-05-12 09:14:11"
+        "timestamp": "2026-05-12 09:14:11",
+        "withdraw": false
     },
     {
         "name": "Shashi Ranjan Kumar",
