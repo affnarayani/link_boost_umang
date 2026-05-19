@@ -227,7 +227,8 @@
         "name": "Niraj Kumar Singh",
         "link": "https://www.linkedin.com/in/niraj-kumar-singh-861989287/",
         "invited": true,
-        "timestamp": "2026-05-11 21:05:57"
+        "timestamp": "2026-05-11 21:05:57",
+        "withdraw": false
     },
     {
         "name": "Tahsin Siddiqui",
