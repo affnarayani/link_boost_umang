@@ -283,7 +283,8 @@
         "name": "Ghunghroo Anand",
         "link": "https://www.linkedin.com/in/ghunghroo-anand-072a9022a/",
         "invited": true,
-        "timestamp": "2026-05-12 09:15:19"
+        "timestamp": "2026-05-12 09:15:19",
+        "withdraw": true
     },
     {
         "name": "Stuti Ranjan",
