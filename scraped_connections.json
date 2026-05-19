@@ -234,7 +234,8 @@
         "name": "Tahsin Siddiqui",
         "link": "https://www.linkedin.com/in/tahsin-siddiqui-283440321/",
         "invited": true,
-        "timestamp": "2026-05-11 21:06:27"
+        "timestamp": "2026-05-11 21:06:27",
+        "withdraw": false
     },
     {
         "name": "Baidyanath Sharan",
