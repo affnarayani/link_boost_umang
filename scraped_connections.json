@@ -1085,12 +1085,14 @@
     {
         "name": "Adv. Amrita (Amme) Kumari",
         "link": "https://www.linkedin.com/in/adv-amrita-amme-kumari-a9a1782b1/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-19 16:38:31"
     },
     {
         "name": "Pushpanjali TTiwari",
         "link": "https://www.linkedin.com/in/pushpanjali-ttiwari-9a57403b9/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-19 16:39:10"
     },
     {
         "name": "Abhiyuday Anand",
