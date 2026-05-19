@@ -1048,7 +1048,8 @@
     {
         "name": "Aaditya Dutta",
         "link": "https://www.linkedin.com/in/aaditya-dutta-70b227312/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-19 08:46:21"
     },
     {
         "name": "Rishu Kumar",
