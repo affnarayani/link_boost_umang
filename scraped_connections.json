@@ -1200,12 +1200,14 @@
     {
         "name": "Aviral Shashwat",
         "link": "https://www.linkedin.com/in/aviral-shashwat-910b50371/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-20 14:12:34"
     },
     {
         "name": "Yashwant Sagar",
         "link": "https://www.linkedin.com/in/yashwant-sagar-6a2b52303/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-20 14:13:08"
     },
     {
         "name": "Dilvar Kumar",
