@@ -1266,17 +1266,20 @@
     {
         "name": "Adv. Anshuman Singh",
         "link": "https://www.linkedin.com/in/adv-anshuman-singh-5583781b4/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-20 21:18:27"
     },
     {
         "name": "Aditya Singh",
         "link": "https://www.linkedin.com/in/aditya-adv-06-/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-20 21:18:57"
     },
     {
         "name": "Satya Prakash",
         "link": "https://www.linkedin.com/in/satya-prakash-96a1b4322/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-20 21:19:28"
     },
     {
         "name": "Amit kumar",
