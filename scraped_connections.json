@@ -1185,7 +1185,8 @@
     {
         "name": "AMAR KUMAR",
         "link": "https://www.linkedin.com/in/amar-kumar-18199a1ba/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-20 11:32:17"
     },
     {
         "name": "Wahaj Alam",
