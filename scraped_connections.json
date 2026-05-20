@@ -1171,7 +1171,8 @@
     {
         "name": "RAJESH KUMAR",
         "link": "https://www.linkedin.com/in/rajesh-kumar-31b70b138/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-20 10:16:15"
     },
     {
         "name": "Sunil Kumar",
