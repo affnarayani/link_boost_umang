@@ -381,7 +381,8 @@
         "name": "Abhiraj Pujan",
         "link": "https://www.linkedin.com/in/abhiraj-pujan-734182215/",
         "invited": true,
-        "timestamp": "2026-05-12 20:49:33"
+        "timestamp": "2026-05-12 20:49:33",
+        "withdraw": true
     },
     {
         "name": "Vikash Yadav",
