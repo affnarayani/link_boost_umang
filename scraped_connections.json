@@ -339,7 +339,8 @@
         "name": "Yashee Sharan",
         "link": "https://www.linkedin.com/in/yashee-sharan-4421801aa/",
         "invited": true,
-        "timestamp": "2026-05-12 17:22:24"
+        "timestamp": "2026-05-12 17:22:24",
+        "withdraw": false
     },
     {
         "name": "Parishmita Bora Choudhary",
