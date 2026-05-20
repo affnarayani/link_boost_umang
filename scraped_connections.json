@@ -1252,7 +1252,8 @@
     {
         "name": "Archana Singh",
         "link": "https://www.linkedin.com/in/archana-singh-730333406/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-20 19:55:24"
     },
     {
         "name": "Abhyant Patel",
