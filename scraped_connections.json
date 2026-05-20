@@ -325,7 +325,8 @@
         "name": "Keshav Narayan Shandilya",
         "link": "https://www.linkedin.com/in/kn-for-you/",
         "invited": true,
-        "timestamp": "2026-05-12 15:47:55"
+        "timestamp": "2026-05-12 15:47:55",
+        "withdraw": false
     },
     {
         "name": "Singh Dharmesh Anand",
