@@ -1346,12 +1346,14 @@
     {
         "name": "Shashank Shekhar",
         "link": "https://www.linkedin.com/in/shashank-shekhar-21b307331/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-21 19:18:43"
     },
     {
         "name": "Bhavya Vijaya Lakshmi",
         "link": "https://www.linkedin.com/in/bhavya-lakshmi/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-21 19:19:16"
     },
     {
         "name": "Devansh Shankar Singh",
