@@ -444,7 +444,8 @@
         "name": "Avantika Singh",
         "link": "https://www.linkedin.com/in/avantika-singh-538b58201/",
         "invited": true,
-        "timestamp": "2026-05-13 11:35:05"
+        "timestamp": "2026-05-13 11:35:05",
+        "withdraw": false
     },
     {
         "name": "Abinash Narayan",
