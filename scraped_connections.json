@@ -458,7 +458,8 @@
         "name": "Ravishankar Kr Singh",
         "link": "https://www.linkedin.com/in/ravishankar-kr-singh-9934a4308/",
         "invited": true,
-        "timestamp": "2026-05-13 11:38:00"
+        "timestamp": "2026-05-13 11:38:00",
+        "withdraw": false
     },
     {
         "name": "Priya Singh",
