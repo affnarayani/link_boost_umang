@@ -1391,7 +1391,8 @@
     {
         "name": "PRIYA SHRIVASTAVA",
         "link": "https://www.linkedin.com/in/priya-shrivastava-b2b83b1b1/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-21 22:47:47"
     },
     {
         "name": "Vikash Kumar Jha",
