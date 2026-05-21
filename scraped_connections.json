@@ -1378,12 +1378,14 @@
     {
         "name": "Anvesha Rishika",
         "link": "https://www.linkedin.com/in/anvesha-rishika-a45b69210/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-21 21:22:35"
     },
     {
         "name": "Ravi Nandan",
         "link": "https://www.linkedin.com/in/ravi-nandan-612b583a2/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-21 21:23:12"
     },
     {
         "name": "PRIYA SHRIVASTAVA",
