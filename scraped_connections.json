@@ -1358,7 +1358,8 @@
     {
         "name": "Devansh Shankar Singh",
         "link": "https://www.linkedin.com/in/devansh-shankar-singh-98344727b/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-21 19:22:49"
     },
     {
         "name": "ASHISH KUMAR",
