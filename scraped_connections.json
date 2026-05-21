@@ -451,7 +451,8 @@
         "name": "Abinash Narayan",
         "link": "https://www.linkedin.com/in/abinash-narayan-7428122b7/",
         "invited": true,
-        "timestamp": "2026-05-13 11:37:32"
+        "timestamp": "2026-05-13 11:37:32",
+        "withdraw": false
     },
     {
         "name": "Ravishankar Kr Singh",
