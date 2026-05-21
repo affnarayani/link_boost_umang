@@ -472,7 +472,8 @@
         "name": "Rohan Aniraj",
         "link": "https://www.linkedin.com/in/rohan-aniraj-022644210/",
         "invited": true,
-        "timestamp": "2026-05-13 12:26:31"
+        "timestamp": "2026-05-13 12:26:31",
+        "withdraw": false
     },
     {
         "name": "Advocate Krishna chandra",
