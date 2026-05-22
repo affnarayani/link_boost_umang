@@ -661,7 +661,8 @@
         "name": "Aniket Singh",
         "link": "https://www.linkedin.com/in/aniket-singh-808752b7/",
         "invited": true,
-        "timestamp": "2026-05-14 20:19:03"
+        "timestamp": "2026-05-14 20:19:03",
+        "withdraw": false
     },
     {
         "name": "Ashish Kumar",
