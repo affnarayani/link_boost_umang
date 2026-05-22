@@ -563,7 +563,8 @@
         "name": "Suraj Kumar",
         "link": "https://www.linkedin.com/in/suraj-kr-b1784434a/",
         "invited": true,
-        "timestamp": "2026-05-14 08:49:31"
+        "timestamp": "2026-05-14 08:49:31",
+        "withdraw": false
     },
     {
         "name": "Ashish Ranjan",
