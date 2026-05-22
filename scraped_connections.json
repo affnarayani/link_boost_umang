@@ -1414,7 +1414,8 @@
     {
         "name": "Navneet Chandra",
         "link": "https://www.linkedin.com/in/navneet-chandra-3196661b4/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-22 10:03:22"
     },
     {
         "name": "puja singh",
