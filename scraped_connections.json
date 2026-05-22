@@ -626,7 +626,8 @@
         "name": "Advocate Rohan Kumar singh",
         "link": "https://www.linkedin.com/in/advocate-rohan-kumar-singh-107881219/",
         "invited": true,
-        "timestamp": "2026-05-14 16:29:33"
+        "timestamp": "2026-05-14 16:29:33",
+        "withdraw": false
     },
     {
         "name": "Kaustubh Prakash",
