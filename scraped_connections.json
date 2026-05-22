@@ -647,7 +647,8 @@
         "name": "Aditi Raj",
         "link": "https://www.linkedin.com/in/aditi-raj-law/",
         "invited": true,
-        "timestamp": "2026-05-14 20:06:21"
+        "timestamp": "2026-05-14 20:06:21",
+        "withdraw": false
     },
     {
         "name": "MOHAMMAD ASHRAF",
