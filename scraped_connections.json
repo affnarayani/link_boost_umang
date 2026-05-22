@@ -1475,12 +1475,14 @@
     {
         "name": "Diptesh Sinha",
         "link": "https://www.linkedin.com/in/diptesh-sinha-919b12203/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-22 22:17:23"
     },
     {
         "name": "Adv. Rajrani Choudhary",
         "link": "https://www.linkedin.com/in/adv-rajrani-choudhary-419714299/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-22 22:18:02"
     },
     {
         "name": "ashok mishra",
