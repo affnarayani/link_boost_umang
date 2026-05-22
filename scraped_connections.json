@@ -654,7 +654,8 @@
         "name": "MOHAMMAD ASHRAF",
         "link": "https://www.linkedin.com/in/mohammad-ashraf-54190b279/",
         "invited": true,
-        "timestamp": "2026-05-14 20:06:46"
+        "timestamp": "2026-05-14 20:06:46",
+        "withdraw": false
     },
     {
         "name": "Aniket Singh",
