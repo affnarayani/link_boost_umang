@@ -549,7 +549,8 @@
         "name": "RAVISH VARMA",
         "link": "https://www.linkedin.com/in/ravish-varma-498009235/",
         "invited": true,
-        "timestamp": "2026-05-14 08:04:42"
+        "timestamp": "2026-05-14 08:04:42",
+        "withdraw": false
     },
     {
         "name": "Piyush Kumar Singh",
