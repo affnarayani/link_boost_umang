@@ -570,7 +570,8 @@
         "name": "Ashish Ranjan",
         "link": "https://www.linkedin.com/in/ashish-ranjan-835abb1a9/",
         "invited": true,
-        "timestamp": "2026-05-14 08:50:04"
+        "timestamp": "2026-05-14 08:50:04",
+        "withdraw": true
     },
     {
         "name": "Raushan Kumar",
