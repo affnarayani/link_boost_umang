@@ -612,7 +612,8 @@
         "name": "Kiran Kumari",
         "link": "https://www.linkedin.com/in/kiran-kumari-1564a8337/",
         "invited": true,
-        "timestamp": "2026-05-14 15:13:16"
+        "timestamp": "2026-05-14 15:13:16",
+        "withdraw": true
     },
     {
         "name": "Nadim Akram",
