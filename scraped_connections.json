@@ -556,7 +556,8 @@
         "name": "Piyush Kumar Singh",
         "link": "https://www.linkedin.com/in/piyush-kumar-singh-130429202/",
         "invited": true,
-        "timestamp": "2026-05-14 08:05:13"
+        "timestamp": "2026-05-14 08:05:13",
+        "withdraw": true
     },
     {
         "name": "Suraj Kumar",
