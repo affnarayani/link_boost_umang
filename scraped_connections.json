@@ -703,7 +703,8 @@
         "name": "Rakesh kumar",
         "link": "https://www.linkedin.com/in/rakesh-kumar-9ba541278/",
         "invited": true,
-        "timestamp": "2026-05-15 12:18:19"
+        "timestamp": "2026-05-15 12:18:19",
+        "withdraw": true
     },
     {
         "name": "Prabhat Singh",
