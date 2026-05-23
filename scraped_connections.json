@@ -1576,7 +1576,8 @@
     {
         "name": "Sonu Kumar",
         "link": "https://www.linkedin.com/in/sonu-kumar-577533361/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-23 15:46:40"
     },
     {
         "name": "Akankshit Jha",
