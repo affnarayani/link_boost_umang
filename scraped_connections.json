@@ -1547,12 +1547,14 @@
     {
         "name": "SUKRITI .",
         "link": "https://www.linkedin.com/in/sukriti-1a5619276/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-23 10:18:49"
     },
     {
         "name": "CHANDAN KUMAR",
         "link": "https://www.linkedin.com/in/chandan-kumar-44a164360/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-23 10:19:18"
     },
     {
         "name": "Mukesh Kumar",
