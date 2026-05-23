@@ -731,7 +731,8 @@
         "name": "Saurabh Singh",
         "link": "https://www.linkedin.com/in/saurabh-singh-99b78a33b/",
         "invited": true,
-        "timestamp": "2026-05-15 17:11:30"
+        "timestamp": "2026-05-15 17:11:30",
+        "withdraw": false
     },
     {
         "name": "Jyoti Singh",
