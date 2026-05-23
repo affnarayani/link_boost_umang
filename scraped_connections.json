@@ -745,7 +745,8 @@
         "name": "Sarvesh Kashyap",
         "link": "https://www.linkedin.com/in/sarvesh-kashyap-88a0a42a0/",
         "invited": true,
-        "timestamp": "2026-05-15 20:00:26"
+        "timestamp": "2026-05-15 20:00:26",
+        "withdraw": false
     },
     {
         "name": "Siddharth Anand",
