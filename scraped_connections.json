@@ -1597,7 +1597,8 @@
     {
         "name": "Sudhanshu Ranjan",
         "link": "https://www.linkedin.com/in/sudhanshu-ranjan-5037271ab/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-23 18:44:02"
     },
     {
         "name": "Pranavi Divya",
