@@ -738,7 +738,8 @@
         "name": "Jyoti Singh",
         "link": "https://www.linkedin.com/in/jyoti-singh-214b18219/",
         "invited": true,
-        "timestamp": "2026-05-15 17:12:01"
+        "timestamp": "2026-05-15 17:12:01",
+        "withdraw": true
     },
     {
         "name": "Sarvesh Kashyap",
