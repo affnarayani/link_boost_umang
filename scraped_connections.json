@@ -668,7 +668,8 @@
         "name": "Ashish Kumar",
         "link": "https://www.linkedin.com/in/ashish-kumar-8b5a76205/",
         "invited": true,
-        "timestamp": "2026-05-14 20:19:38"
+        "timestamp": "2026-05-14 20:19:38",
+        "withdraw": false
     },
     {
         "name": "Adv. Shivam Bhardwaj",
