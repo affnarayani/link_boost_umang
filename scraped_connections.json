@@ -752,7 +752,8 @@
         "name": "Siddharth Anand",
         "link": "https://www.linkedin.com/in/siddharth-anand-8179622ab/",
         "invited": true,
-        "timestamp": "2026-05-15 20:02:20"
+        "timestamp": "2026-05-15 20:02:20",
+        "withdraw": false
     },
     {
         "name": "Adv. Manav Anand",
