@@ -1527,7 +1527,8 @@
     {
         "name": "Mukku MALLICK 8",
         "link": "https://www.linkedin.com/in/mukku-mallick-8-24190a1a8/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-23 07:55:57"
     },
     {
         "name": "Adv Vikash Yadav",
