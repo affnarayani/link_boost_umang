@@ -696,7 +696,8 @@
         "name": "Gaurav Prakash",
         "link": "https://www.linkedin.com/in/advgauravprakash/",
         "invited": true,
-        "timestamp": "2026-05-15 12:17:51"
+        "timestamp": "2026-05-15 12:17:51",
+        "withdraw": false
     },
     {
         "name": "Rakesh kumar",
