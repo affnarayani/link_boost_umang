@@ -1590,7 +1590,8 @@
     {
         "name": "Vishal Anand",
         "link": "https://www.linkedin.com/in/mevishalanand/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-23 16:42:15"
     },
     {
         "name": "Sudhanshu Ranjan",
