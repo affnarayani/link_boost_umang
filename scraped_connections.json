@@ -682,7 +682,8 @@
         "name": "ANMOL KUMAR",
         "link": "https://www.linkedin.com/in/anmol-kumar-67388b202/",
         "invited": true,
-        "timestamp": "2026-05-15 07:40:43"
+        "timestamp": "2026-05-15 07:40:43",
+        "withdraw": false
     },
     {
         "name": "Riya Kumari",
