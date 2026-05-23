@@ -724,7 +724,8 @@
         "name": "Ujjawal Raj",
         "link": "https://www.linkedin.com/in/ujjawal-raj-854a19203/",
         "invited": true,
-        "timestamp": "2026-05-15 15:09:43"
+        "timestamp": "2026-05-15 15:09:43",
+        "withdraw": true
     },
     {
         "name": "Saurabh Singh",
