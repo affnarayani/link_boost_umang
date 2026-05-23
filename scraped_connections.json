@@ -759,7 +759,8 @@
         "name": "Adv. Manav Anand",
         "link": "https://www.linkedin.com/in/adv-manav-anand-889973173/",
         "invited": true,
-        "timestamp": "2026-05-15 20:02:54"
+        "timestamp": "2026-05-15 20:02:54",
+        "withdraw": false
     },
     {
         "name": "Vishwas Kumar",
