@@ -1722,7 +1722,8 @@
     {
         "name": "Aditya Kumar",
         "link": "https://www.linkedin.com/in/aditya-kumar-1a2a13365/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-24 19:07:50"
     },
     {
         "name": "Kalyan Kishor",
