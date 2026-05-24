@@ -850,7 +850,8 @@
         "name": "Subhash Patel",
         "link": "https://www.linkedin.com/in/subhash-patel-9aa619239/",
         "invited": true,
-        "timestamp": "2026-05-16 10:15:13"
+        "timestamp": "2026-05-16 10:15:13",
+        "withdraw": true
     },
     {
         "name": "AVINASH RAJ",
