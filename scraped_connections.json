@@ -1704,7 +1704,8 @@
     {
         "name": "Shankar Pandey",
         "link": "https://www.linkedin.com/in/shankar-pandey-a91162bb/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-24 17:33:02"
     },
     {
         "name": "Pooja Kumari",
