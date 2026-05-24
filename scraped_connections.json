@@ -1698,7 +1698,8 @@
     {
         "name": "Adv Bhaskar Anand",
         "link": "https://www.linkedin.com/in/adv-bhaskar-anand-241a51407/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-24 16:47:02"
     },
     {
         "name": "Shankar Pandey",
