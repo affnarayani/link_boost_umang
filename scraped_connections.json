@@ -822,7 +822,8 @@
         "name": "Amrit Kumar",
         "link": "https://www.linkedin.com/in/amrit-kumar-558365259/",
         "invited": true,
-        "timestamp": "2026-05-16 08:31:55"
+        "timestamp": "2026-05-16 08:31:55",
+        "withdraw": true
     },
     {
         "name": "Rahul Singh",
