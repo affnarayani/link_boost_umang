@@ -1688,7 +1688,8 @@
     {
         "name": "Sanjay kumar Singh.",
         "link": "https://www.linkedin.com/in/sanjay-kumar-singh-bb39831a7/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-24 15:38:01"
     },
     {
         "name": "Adv Bhaskar Anand",
