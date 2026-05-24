@@ -1649,7 +1649,8 @@
     {
         "name": "Niharika Tripathi",
         "link": "https://www.linkedin.com/in/tripathiniharika/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-24 09:33:57"
     },
     {
         "name": "Ujjawal Kumar",
