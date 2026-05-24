@@ -787,7 +787,8 @@
         "name": "Swati Prakash",
         "link": "https://www.linkedin.com/in/swati-prakash-b675a7245/",
         "invited": true,
-        "timestamp": "2026-05-15 21:39:45"
+        "timestamp": "2026-05-15 21:39:45",
+        "withdraw": true
     },
     {
         "name": "Subodh Kumar",
