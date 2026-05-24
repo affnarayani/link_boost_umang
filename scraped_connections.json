@@ -1676,7 +1676,8 @@
     {
         "name": "Priyanjali Singh",
         "link": "https://www.linkedin.com/in/priyanjali-singh-a466a5375/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-24 14:54:47"
     },
     {
         "name": "Adv. Sweta Rani",
