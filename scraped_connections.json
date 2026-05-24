@@ -1638,7 +1638,8 @@
     {
         "name": "Rudra Pratap Lal",
         "link": "https://www.linkedin.com/in/rudra-pratap-lal-74a0462a0/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-24 07:53:15"
     },
     {
         "name": "Niharika Tripathi",
