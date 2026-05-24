@@ -808,7 +808,8 @@
         "name": "Puja Kumari",
         "link": "https://www.linkedin.com/in/voiceofpuja/",
         "invited": true,
-        "timestamp": "2026-05-16 08:30:49"
+        "timestamp": "2026-05-16 08:30:49",
+        "withdraw": false
     },
     {
         "name": "Sweta Ranjan",
