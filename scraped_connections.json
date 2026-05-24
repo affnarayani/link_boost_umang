@@ -1657,7 +1657,8 @@
     {
         "name": "Ujjawal Kumar",
         "link": "https://www.linkedin.com/in/ujjawal-kumar-5854741b6/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-24 12:44:19"
     },
     {
         "name": "Adv. Barun Shrivastva",
