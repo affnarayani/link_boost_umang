@@ -829,7 +829,8 @@
         "name": "Rahul Singh",
         "link": "https://www.linkedin.com/in/rahul-singh-969303324/",
         "invited": true,
-        "timestamp": "2026-05-16 09:15:23"
+        "timestamp": "2026-05-16 09:15:23",
+        "withdraw": true
     },
     {
         "name": "Megha Singh",
