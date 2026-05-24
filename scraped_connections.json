@@ -871,7 +871,8 @@
         "name": "Ravi Kumar",
         "link": "https://www.linkedin.com/in/ravi-kumar-514934314/",
         "invited": true,
-        "timestamp": "2026-05-16 14:21:55"
+        "timestamp": "2026-05-16 14:21:55",
+        "withdraw": true
     },
     {
         "name": "Rajesh K Sinha",
