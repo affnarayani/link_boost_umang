@@ -815,7 +815,8 @@
         "name": "Sweta Ranjan",
         "link": "https://www.linkedin.com/in/sweta-ranjan-919723228/",
         "invited": true,
-        "timestamp": "2026-05-16 08:31:24"
+        "timestamp": "2026-05-16 08:31:24",
+        "withdraw": false
     },
     {
         "name": "Amrit Kumar",
