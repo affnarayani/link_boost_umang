@@ -843,7 +843,8 @@
         "name": "Anshu Kumar (Pandey)",
         "link": "https://www.linkedin.com/in/anshu-kumar-pandey-6509a32a4/",
         "invited": true,
-        "timestamp": "2026-05-16 10:14:42"
+        "timestamp": "2026-05-16 10:14:42",
+        "withdraw": false
     },
     {
         "name": "Subhash Patel",
