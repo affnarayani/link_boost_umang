@@ -780,7 +780,8 @@
         "name": "Pawas Singh",
         "link": "https://www.linkedin.com/in/pawassingh/",
         "invited": true,
-        "timestamp": "2026-05-15 21:33:45"
+        "timestamp": "2026-05-15 21:33:45",
+        "withdraw": false
     },
     {
         "name": "Swati Prakash",
