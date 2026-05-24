@@ -1682,7 +1682,8 @@
     {
         "name": "Adv. Sweta Rani",
         "link": "https://www.linkedin.com/in/adv-sweta-rani-482278319/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-24 15:33:38"
     },
     {
         "name": "Sanjay kumar Singh.",
