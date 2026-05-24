@@ -1730,7 +1730,8 @@
     {
         "name": "Kalyan Kishor",
         "link": "https://www.linkedin.com/in/kalyan-kishor-a24111216/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-24 22:43:12"
     },
     {
         "name": "Indrajeet Kumar",
