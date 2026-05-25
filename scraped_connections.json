@@ -997,7 +997,8 @@
         "name": "Asit kumar",
         "link": "https://www.linkedin.com/in/asit-kumar-3b3b601a6/",
         "invited": true,
-        "timestamp": "2026-05-17 14:42:38"
+        "timestamp": "2026-05-17 14:42:38",
+        "withdraw": false
     },
     {
         "name": "Vandna Rani",
