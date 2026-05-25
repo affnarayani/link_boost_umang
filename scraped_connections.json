@@ -1826,7 +1826,8 @@
     {
         "name": "Swastika .",
         "link": "https://www.linkedin.com/in/swastika-236843319/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-25 17:17:26"
     },
     {
         "name": "Shivansh Singh",
