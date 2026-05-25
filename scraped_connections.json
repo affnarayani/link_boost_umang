@@ -913,7 +913,8 @@
         "name": "Arun Kumar",
         "link": "https://www.linkedin.com/in/arun-kumar-ba984a283/",
         "invited": true,
-        "timestamp": "2026-05-16 19:50:31"
+        "timestamp": "2026-05-16 19:50:31",
+        "withdraw": true
     },
     {
         "name": "Akash Deep",
