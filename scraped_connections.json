@@ -1859,7 +1859,8 @@
     {
         "name": "Somya Bharti",
         "link": "https://www.linkedin.com/in/somya-bharti-18a75a262/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-25 21:50:31"
     },
     {
         "name": "Diwakar (Adv Diwakar)",
