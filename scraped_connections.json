@@ -1761,7 +1761,8 @@
     {
         "name": "ASHUTOSH PRASAD JOSHI",
         "link": "https://www.linkedin.com/in/ashutosh-prasad-joshi-5376951a9/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-25 11:39:32"
     },
     {
         "name": "Abhinandan Raj",
