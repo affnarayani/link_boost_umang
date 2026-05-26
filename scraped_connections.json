@@ -1060,7 +1060,8 @@
         "name": "James Peter",
         "link": "https://www.linkedin.com/in/james-peter-599097208/",
         "invited": true,
-        "timestamp": "2026-05-18 08:59:29"
+        "timestamp": "2026-05-18 08:59:29",
+        "withdraw": true
     },
     {
         "name": "Abhishek Shandilya",
