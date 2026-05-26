@@ -1887,7 +1887,8 @@
     {
         "name": "Zeyaul Hoda",
         "link": "https://www.linkedin.com/in/zeyaul-hoda-46a079261/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-26 12:50:34"
     },
     {
         "name": "Viveka Nand",
