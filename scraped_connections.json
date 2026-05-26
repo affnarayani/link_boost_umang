@@ -1025,7 +1025,8 @@
         "name": "Mukesh Gautam",
         "link": "https://www.linkedin.com/in/mukesh-gautam-502594114/",
         "invited": true,
-        "timestamp": "2026-05-17 18:16:46"
+        "timestamp": "2026-05-17 18:16:46",
+        "withdraw": true
     },
     {
         "name": "Abhinav Anand",
