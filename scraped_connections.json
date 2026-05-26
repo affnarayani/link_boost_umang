@@ -1927,7 +1927,8 @@
     {
         "name": "Jai Prakash Singh",
         "link": "https://www.linkedin.com/in/jai-prakash-singh-b15759248/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-26 18:08:09"
     },
     {
         "name": "Rohit Kumar",
