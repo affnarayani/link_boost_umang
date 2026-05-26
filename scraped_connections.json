@@ -1088,7 +1088,8 @@
         "name": "Shiv Pratap",
         "link": "https://www.linkedin.com/in/shiv-pratap-b0651b252/",
         "invited": true,
-        "timestamp": "2026-05-18 12:53:33"
+        "timestamp": "2026-05-18 12:53:33",
+        "withdraw": true
     },
     {
         "name": "Adv. Vaibhav Kumar",
