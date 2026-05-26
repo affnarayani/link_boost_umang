@@ -1046,7 +1046,8 @@
         "name": "ANISH KUMAR",
         "link": "https://www.linkedin.com/in/anish-kumar-3b4a61221/",
         "invited": true,
-        "timestamp": "2026-05-17 22:30:54"
+        "timestamp": "2026-05-17 22:30:54",
+        "withdraw": true
     },
     {
         "name": "Sunit Kumar Srivastava",
