@@ -1942,7 +1942,8 @@
     {
         "name": "Satyam ..",
         "link": "https://www.linkedin.com/in/ayush-dwivedi-ai/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-26 20:50:24"
     },
     {
         "name": "RAMRATAN kumar",
