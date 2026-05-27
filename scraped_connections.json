@@ -1165,7 +1165,8 @@
         "name": "Adv. Subhankar Prabhakar",
         "link": "https://www.linkedin.com/in/dnalegally/",
         "invited": true,
-        "timestamp": "2026-05-18 23:53:45"
+        "timestamp": "2026-05-18 23:53:45",
+        "withdraw": false
     },
     {
         "name": "Vivek Abhishek",
