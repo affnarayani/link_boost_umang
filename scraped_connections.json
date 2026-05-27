@@ -1193,7 +1193,8 @@
         "name": "Rishu Kumar",
         "link": "https://www.linkedin.com/in/rishu-kumar-370a351b4/",
         "invited": true,
-        "timestamp": "2026-05-19 10:27:02"
+        "timestamp": "2026-05-19 10:27:02",
+        "withdraw": false
     },
     {
         "name": "Pragya Kumari",
