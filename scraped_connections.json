@@ -1978,7 +1978,8 @@
     {
         "name": "Amit Kumar Yadav",
         "link": "https://www.linkedin.com/in/amit-kumar-yadav-293221272/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-27 08:54:14"
     },
     {
         "name": "Binod Singh",
