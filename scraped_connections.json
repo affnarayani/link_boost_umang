@@ -1179,7 +1179,8 @@
         "name": "Pratibha Kumari",
         "link": "https://www.linkedin.com/in/pratibha-kumari-173584273/",
         "invited": true,
-        "timestamp": "2026-05-19 08:36:15"
+        "timestamp": "2026-05-19 08:36:15",
+        "withdraw": false
     },
     {
         "name": "Aaditya Dutta",
