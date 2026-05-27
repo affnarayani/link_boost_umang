@@ -1123,7 +1123,8 @@
         "name": "Adv. Sanjeev",
         "link": "https://www.linkedin.com/in/advsanjeev/",
         "invited": true,
-        "timestamp": "2026-05-18 18:15:30"
+        "timestamp": "2026-05-18 18:15:30",
+        "withdraw": false
     },
     {
         "name": "RITESH VERMA",
