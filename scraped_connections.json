@@ -1984,12 +1984,14 @@
     {
         "name": "Binod Singh",
         "link": "https://www.linkedin.com/in/binod-singh-2b50b72a1/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-27 09:42:42"
     },
     {
         "name": "Advocate Amit Kumar Singh",
         "link": "https://www.linkedin.com/in/advocate-amit-kumar-singh-b62052396/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-27 09:43:11"
     },
     {
         "name": "Sunilkumar Pathak",
