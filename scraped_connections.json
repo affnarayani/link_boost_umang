@@ -2018,7 +2018,8 @@
     {
         "name": "RP Kashyap",
         "link": "https://www.linkedin.com/in/rp-kashyap-00129236a/",
-        "invited": false
+        "invited": true,
+        "timestamp": "2026-05-27 14:31:25"
     },
     {
         "name": "Sanjay Kumar Tiwary",
