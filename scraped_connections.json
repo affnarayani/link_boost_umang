@@ -1116,7 +1116,8 @@
         "name": "Raja Kumar",
         "link": "https://www.linkedin.com/in/raja-kumar-53b49a341/",
         "invited": true,
-        "timestamp": "2026-05-18 17:22:08"
+        "timestamp": "2026-05-18 17:22:08",
+        "withdraw": true
     },
     {
         "name": "Adv. Sanjeev",
