@@ -1158,7 +1158,8 @@
         "name": "Adv. Aman Anand",
         "link": "https://www.linkedin.com/in/adv-aman-anand-18a9ab23a/",
         "invited": true,
-        "timestamp": "2026-05-18 22:35:12"
+        "timestamp": "2026-05-18 22:35:12",
+        "withdraw": false
     },
     {
         "name": "Adv. Subhankar Prabhakar",
