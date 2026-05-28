@@ -1284,7 +1284,8 @@
         "name": "Adv.Anurag Patel",
         "link": "https://www.linkedin.com/in/adv-anurag-patel-838248239/",
         "invited": true,
-        "timestamp": "2026-05-19 21:50:46"
+        "timestamp": "2026-05-19 21:50:46",
+        "withdraw": true
     },
     {
         "name": "Saurabh Bishwambhar",
