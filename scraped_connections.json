@@ -1403,7 +1403,8 @@
         "name": "Abhyant Patel",
         "link": "https://www.linkedin.com/in/abhyant-patel-0584a722b/",
         "invited": true,
-        "timestamp": "2026-05-20 20:31:22"
+        "timestamp": "2026-05-20 20:31:22",
+        "withdraw": true
     },
     {
         "name": "Adv. Anshuman Singh",
