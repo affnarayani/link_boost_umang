@@ -1340,7 +1340,8 @@
         "name": "Aviral Shashwat",
         "link": "https://www.linkedin.com/in/aviral-shashwat-910b50371/",
         "invited": true,
-        "timestamp": "2026-05-20 14:12:34"
+        "timestamp": "2026-05-20 14:12:34",
+        "withdraw": false
     },
     {
         "name": "Yashwant Sagar",
