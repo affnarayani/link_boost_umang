@@ -1347,7 +1347,8 @@
         "name": "Yashwant Sagar",
         "link": "https://www.linkedin.com/in/yashwant-sagar-6a2b52303/",
         "invited": true,
-        "timestamp": "2026-05-20 14:13:08"
+        "timestamp": "2026-05-20 14:13:08",
+        "withdraw": true
     },
     {
         "name": "Dilvar Kumar",
