@@ -1382,7 +1382,8 @@
         "name": "Ankit Kumar",
         "link": "https://www.linkedin.com/in/ankit-kumar-42b7082aa/",
         "invited": true,
-        "timestamp": "2026-05-20 17:59:12"
+        "timestamp": "2026-05-20 17:59:12",
+        "withdraw": true
     },
     {
         "name": "SHAMBHU NATH SAH",
