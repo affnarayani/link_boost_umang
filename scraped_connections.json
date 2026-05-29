@@ -1312,7 +1312,8 @@
         "name": "RAJESH KUMAR",
         "link": "https://www.linkedin.com/in/rajesh-kumar-31b70b138/",
         "invited": true,
-        "timestamp": "2026-05-20 10:16:15"
+        "timestamp": "2026-05-20 10:16:15",
+        "withdraw": true
     },
     {
         "name": "Sunil Kumar",
