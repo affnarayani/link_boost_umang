@@ -1487,7 +1487,8 @@
         "name": "Shashank Shekhar",
         "link": "https://www.linkedin.com/in/shashank-shekhar-21b307331/",
         "invited": true,
-        "timestamp": "2026-05-21 19:18:43"
+        "timestamp": "2026-05-21 19:18:43",
+        "withdraw": true
     },
     {
         "name": "Bhavya Vijaya Lakshmi",
