@@ -1431,7 +1431,8 @@
         "name": "Amit kumar",
         "link": "https://www.linkedin.com/in/amit-kumar-a7b9712a4/",
         "invited": true,
-        "timestamp": "2026-05-20 22:14:54"
+        "timestamp": "2026-05-20 22:14:54",
+        "withdraw": true
     },
     {
         "name": "Prakash Kumar",
