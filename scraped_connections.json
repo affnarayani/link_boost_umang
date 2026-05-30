@@ -1424,7 +1424,8 @@
         "name": "Satya Prakash",
         "link": "https://www.linkedin.com/in/satya-prakash-96a1b4322/",
         "invited": true,
-        "timestamp": "2026-05-20 21:19:28"
+        "timestamp": "2026-05-20 21:19:28",
+        "withdraw": false
     },
     {
         "name": "Amit kumar",
