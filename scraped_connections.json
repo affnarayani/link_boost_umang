@@ -1480,7 +1480,8 @@
         "name": "Revant Sharma",
         "link": "https://www.linkedin.com/in/revant-sharma-1baa022b6/",
         "invited": true,
-        "timestamp": "2026-05-21 18:18:15"
+        "timestamp": "2026-05-21 18:18:15",
+        "withdraw": true
     },
     {
         "name": "Shashank Shekhar",
