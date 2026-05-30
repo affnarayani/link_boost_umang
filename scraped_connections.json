@@ -1452,7 +1452,8 @@
         "name": "Prashant Kashyap",
         "link": "https://www.linkedin.com/in/prashant-kashyap-73318524b/",
         "invited": true,
-        "timestamp": "2026-05-21 10:40:30"
+        "timestamp": "2026-05-21 10:40:30",
+        "withdraw": true
     },
     {
         "name": "shailendra kumar",
