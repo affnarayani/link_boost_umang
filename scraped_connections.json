@@ -1466,7 +1466,8 @@
         "name": "Abhishek Raj",
         "link": "https://www.linkedin.com/in/abhishek-raj-4897a7274/",
         "invited": true,
-        "timestamp": "2026-05-21 16:03:03"
+        "timestamp": "2026-05-21 16:03:03",
+        "withdraw": true
     },
     {
         "name": "Mohammad Ali Anwar",
