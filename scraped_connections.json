@@ -1459,7 +1459,8 @@
         "name": "shailendra kumar",
         "link": "https://www.linkedin.com/in/shailendra-kumar-520430303/",
         "invited": true,
-        "timestamp": "2026-05-21 13:49:23"
+        "timestamp": "2026-05-21 13:49:23",
+        "withdraw": true
     },
     {
         "name": "Abhishek Raj",
