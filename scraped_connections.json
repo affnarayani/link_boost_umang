@@ -1445,7 +1445,8 @@
         "name": "Adv. Rahul Gandhi",
         "link": "https://www.linkedin.com/in/adv-rahul-gandhi-107752240/",
         "invited": true,
-        "timestamp": "2026-05-21 10:07:34"
+        "timestamp": "2026-05-21 10:07:34",
+        "withdraw": false
     },
     {
         "name": "Prashant Kashyap",
