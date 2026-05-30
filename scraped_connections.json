@@ -1417,7 +1417,8 @@
         "name": "Aditya Singh",
         "link": "https://www.linkedin.com/in/aditya-adv-06-/",
         "invited": true,
-        "timestamp": "2026-05-20 21:18:57"
+        "timestamp": "2026-05-20 21:18:57",
+        "withdraw": false
     },
     {
         "name": "Satya Prakash",
