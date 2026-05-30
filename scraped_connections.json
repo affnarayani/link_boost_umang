@@ -1473,7 +1473,8 @@
         "name": "Mohammad Ali Anwar",
         "link": "https://www.linkedin.com/in/mohammad-ali-anwar-2b554a228/",
         "invited": true,
-        "timestamp": "2026-05-21 18:17:47"
+        "timestamp": "2026-05-21 18:17:47",
+        "withdraw": false
     },
     {
         "name": "Revant Sharma",
