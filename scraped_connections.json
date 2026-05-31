@@ -1557,7 +1557,8 @@
         "name": "Navneet Chandra",
         "link": "https://www.linkedin.com/in/navneet-chandra-3196661b4/",
         "invited": true,
-        "timestamp": "2026-05-22 10:03:22"
+        "timestamp": "2026-05-22 10:03:22",
+        "withdraw": true
     },
     {
         "name": "puja singh",
