@@ -1571,7 +1571,8 @@
         "name": "Raj Kumar singh",
         "link": "https://www.linkedin.com/in/raj-kumar-singh-1b68a8317/",
         "invited": true,
-        "timestamp": "2026-05-22 15:39:54"
+        "timestamp": "2026-05-22 15:39:54",
+        "withdraw": true
     },
     {
         "name": "Abhijeet Gautam",
