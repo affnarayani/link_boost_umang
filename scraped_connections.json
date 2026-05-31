@@ -1550,7 +1550,8 @@
         "name": "Sahil Kumar",
         "link": "https://www.linkedin.com/in/sahil-kumar-524850178/",
         "invited": true,
-        "timestamp": "2026-05-22 08:49:26"
+        "timestamp": "2026-05-22 08:49:26",
+        "withdraw": true
     },
     {
         "name": "Navneet Chandra",
