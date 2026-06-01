@@ -1655,7 +1655,8 @@
         "name": "Indradev Singh",
         "link": "https://www.linkedin.com/in/indradev-singh-508452227/",
         "invited": true,
-        "timestamp": "2026-05-23 07:43:18"
+        "timestamp": "2026-05-23 07:43:18",
+        "withdraw": true
     },
     {
         "name": "Asif Iqbal",
