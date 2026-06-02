@@ -1718,7 +1718,8 @@
         "name": "Sonu Kumar",
         "link": "https://www.linkedin.com/in/sonu-kumar-577533361/",
         "invited": true,
-        "timestamp": "2026-05-23 15:46:40"
+        "timestamp": "2026-05-23 15:46:40",
+        "withdraw": true
     },
     {
         "name": "Akankshit Jha",
