@@ -1725,7 +1725,8 @@
         "name": "Akankshit Jha",
         "link": "https://www.linkedin.com/in/akankshit-jha-3101a8ab/",
         "invited": true,
-        "timestamp": "2026-05-23 16:02:40"
+        "timestamp": "2026-05-23 16:02:40",
+        "withdraw": false
     },
     {
         "name": "Vishal Anand",
