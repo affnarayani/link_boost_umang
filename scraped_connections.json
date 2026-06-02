@@ -1753,7 +1753,8 @@
         "name": "Fardeen Abbas",
         "link": "https://www.linkedin.com/in/fardeen-abbas-140959215/",
         "invited": true,
-        "timestamp": "2026-05-23 21:34:53"
+        "timestamp": "2026-05-23 21:34:53",
+        "withdraw": false
     },
     {
         "name": "rajiv kumar",
