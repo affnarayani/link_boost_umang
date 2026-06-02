@@ -1760,7 +1760,8 @@
         "name": "rajiv kumar",
         "link": "https://www.linkedin.com/in/rajiv-kumar-321854205/",
         "invited": true,
-        "timestamp": "2026-05-23 21:54:32"
+        "timestamp": "2026-05-23 21:54:32",
+        "withdraw": true
     },
     {
         "name": "Chandan Kumar",
