@@ -1774,7 +1774,8 @@
         "name": "Ashar Akhtar",
         "link": "https://www.linkedin.com/in/ashar-akhtar-860690351/",
         "invited": true,
-        "timestamp": "2026-05-24 06:24:33"
+        "timestamp": "2026-05-24 06:24:33",
+        "withdraw": false
     },
     {
         "name": "Rudra Pratap Lal",
