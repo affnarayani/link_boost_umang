@@ -1809,7 +1809,8 @@
         "name": "Sanjay kumar",
         "link": "https://www.linkedin.com/in/sanjay-kumar-a50528217/",
         "invited": true,
-        "timestamp": "2026-05-24 14:53:11"
+        "timestamp": "2026-05-24 14:53:11",
+        "withdraw": true
     },
     {
         "name": "Priyanjali Singh",
