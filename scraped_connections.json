@@ -1921,7 +1921,8 @@
         "name": "Pushpa Gupta",
         "link": "https://www.linkedin.com/in/pushpa-gupta-305692404/",
         "invited": true,
-        "timestamp": "2026-05-25 12:55:51"
+        "timestamp": "2026-05-25 12:55:51",
+        "withdraw": false
     },
     {
         "name": "KUMAR HARSHVARDHAN",
