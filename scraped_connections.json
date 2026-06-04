@@ -1991,7 +1991,8 @@
         "name": "Bhola Shankar",
         "link": "https://www.linkedin.com/in/bhola-shankar-076219224/",
         "invited": true,
-        "timestamp": "2026-05-25 20:48:26"
+        "timestamp": "2026-05-25 20:48:26",
+        "withdraw": false
     },
     {
         "name": "Sarfraz Alam",
