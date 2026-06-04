@@ -1998,7 +1998,8 @@
         "name": "Sarfraz Alam",
         "link": "https://www.linkedin.com/in/sarfraz-alam-973795219/",
         "invited": true,
-        "timestamp": "2026-05-25 20:48:58"
+        "timestamp": "2026-05-25 20:48:58",
+        "withdraw": false
     },
     {
         "name": "Somya Bharti",
