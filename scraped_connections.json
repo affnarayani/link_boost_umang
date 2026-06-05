@@ -2061,7 +2061,8 @@
         "name": "Rahul Raj",
         "link": "https://www.linkedin.com/in/rahul-raj-5a09bb226/",
         "invited": true,
-        "timestamp": "2026-05-26 16:44:10"
+        "timestamp": "2026-05-26 16:44:10",
+        "withdraw": true
     },
     {
         "name": "Atul Kumar",
