@@ -2005,7 +2005,8 @@
         "name": "Somya Bharti",
         "link": "https://www.linkedin.com/in/somya-bharti-18a75a262/",
         "invited": true,
-        "timestamp": "2026-05-25 21:50:31"
+        "timestamp": "2026-05-25 21:50:31",
+        "withdraw": false
     },
     {
         "name": "Diwakar (Adv Diwakar)",
