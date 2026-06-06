@@ -2110,7 +2110,8 @@
         "name": "Kumar Gourav",
         "link": "https://www.linkedin.com/in/kumar-gourav-0a0150202/",
         "invited": true,
-        "timestamp": "2026-05-26 22:49:57"
+        "timestamp": "2026-05-26 22:49:57",
+        "withdraw": true
     },
     {
         "name": "Parwez Ansari",
