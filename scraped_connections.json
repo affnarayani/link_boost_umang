@@ -2117,7 +2117,8 @@
         "name": "Parwez Ansari",
         "link": "https://www.linkedin.com/in/parwez-ansari-2933871ba/",
         "invited": true,
-        "timestamp": "2026-05-26 23:22:40"
+        "timestamp": "2026-05-26 23:22:40",
+        "withdraw": true
     },
     {
         "name": "Amit Kumar Yadav",
