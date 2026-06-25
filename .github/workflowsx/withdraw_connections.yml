@@ -1,0 +1,108 @@
+name: Withdraw Connections
+
+on:
+  schedule:
+    - cron: '36 16 * * *'
+    - cron: '26 6 * * *'
+    - cron: '13 17 * * *'
+    - cron: '7 3 * * *'
+    - cron: '27 2 * * *'
+    - cron: '52 11 * * *'
+    - cron: '56 15 * * *'
+    - cron: '33 3 * * *'
+    - cron: '47 22 * * *'
+    - cron: '45 18 * * *'
+    - cron: '30 12 * * *'
+    - cron: '44 20 * * *'
+    - cron: '44 18 * * *'
+    - cron: '8 6 * * *'
+    - cron: '33 17 * * *'
+    - cron: '48 10 * * *'
+    - cron: '59 12 * * *'
+    - cron: '7 3 * * *'
+  workflow_dispatch: {}
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+concurrency:
+  group: ci-${{ github.workflow }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  withdraw-connections:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+
+      - name: Skip on 1st of month
+        run: |
+          if [ "$(date +%d)" = "01" ]; then
+            echo "Skipping on 1st of month"
+            exit 0
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Google Chrome
+        uses: browser-actions/setup-chrome@v2
+        with:
+          chrome-version: stable
+
+      - name: Show Chrome version
+        run: chrome --version
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Playwright Browser
+        run: |
+          # Pehle browser install karo
+          python -m playwright install chromium
+          # Phir sirf un dependencies ko install karo jo ubuntu-latest (24.04) support karta hai
+          sudo npx playwright install-deps chromium
+
+      - name: Create .env with DECRYPT_KEY only
+        shell: bash
+        run: |
+          set -e
+          : > .env
+          if [ -n "${{ secrets.DECRYPT_KEY }}" ]; then
+            echo "DECRYPT_KEY=${{ secrets.DECRYPT_KEY }}" >> .env
+          fi
+
+      - name: Run withdraw_connections.py (headless)
+        env:
+          HEADLESS: '1'
+        run: |
+          python withdraw_connections.py
+
+      - name: Commit and push changes (end only)
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update data from withdraw_connections.py [skip ci]"
+            if git pull --rebase --no-edit; then
+              git push
+            else
+              git rebase --abort
+              echo "Rebase failed due to conflicts, skipping push"
+            fi
+          else
+            echo "No changes to commit."
+          fi
