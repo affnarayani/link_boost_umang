@@ -1,14 +1,14 @@
 {
-    "title": "Online identity theft - distinguishing it from regular fraud",
-    "p1": "Most people think fraud and identity theft are the same thing. They are not—and the difference changes how you protect yourself online.",
-    "p2": "A common misconception is that both only involve stolen money. But identity theft can happen long before any transaction occurs. Your data can be quietly collected, combined, and even sold, without you seeing a single charge. Many people say, 'I didn't lose anything, so I must be safe'—that’s the risky part.",
-    "p3": "Identity theft is about impersonation—someone using your personal details to act as you. Fraud is usually a single unauthorized transaction. The key difference is scope: one attack takes money, the other can take your entire digital identity. A simple step is enabling alerts on your accounts and reviewing logins regularly so unusual activity doesn’t go unnoticed.",
-    "conclusion": "Have you ever noticed a login or account change you didn’t make—and wondered whether it was fraud or identity misuse?",
+    "title": "Smart contracts on blockchain - their legal enforceability in India",
+    "p1": "Can a line of code replace a legal contract in India?\nMany assume smart contracts are automatically legally enforceable just because they run on blockchain. That belief is more common than you’d expect among founders and tech teams.",
+    "p2": "Reality: In India, a smart contract is not automatically a “legal contract.” The Indian Contract Act, 1872 still applies. For enforceability, key elements like offer, acceptance, lawful consideration, and intention to create legal relations must exist. Code executing on blockchain alone doesn’t satisfy these conditions in many cases.",
+    "p3": "Think of it like this: blockchain can automate execution, but law validates agreements. Courts in India typically look at traditional contract principles, not just code. However, digital signatures and electronic records are recognized under the IT Act, which can support hybrid smart contracts linked to off-chain legal agreements. Practical takeaway: treat smart contracts as execution tools, not replacements for legal contracts. Always pair code with a legally drafted agreement for real-world enforceability.",
+    "conclusion": "What should matter more in India today—code that runs flawlessly, or legal drafting that ensures enforceability when disputes reach court?",
     "keywords": [
-        "onlinefraud",
-        "identitytheft",
-        "cybersecurity",
-        "datasecurity",
-        "digitalidentity"
+        "smartcontracts",
+        "blockchain",
+        "india",
+        "contractlaw",
+        "legaltech"
     ]
 }
