@@ -103,7 +103,7 @@ def run():
 
         # 6. REACT LIKE
         print("[STEP] Locating 'React Like' button...", flush=True)
-        like_btn = page.get_by_role('button', name='React Like', exact=True)
+        like_btn = page.get_by_role('button', name='Reaction button state: no reaction', exact=True)
         if like_btn.count() > 0:
             like_btn.first.click()
             print("[SUCCESS] Post liked.", flush=True)
