@@ -91,9 +91,14 @@ def run():
         # 7. Extract content
         page.goto(trimmed_url, wait_until="load")
         custom_random_wait(6, 12)
-        post_content = page.locator(".update-components-text").first.inner_text().strip()
+        
+        # data-testid="expandable-text-box" ko target kar rahe hain
+        post_locator = page.locator('[data-testid="expandable-text-box"]').first
+        post_locator.wait_for(state="visible", timeout=15000)
+        post_content = post_locator.inner_text().strip()
         
         if len(post_content) < 150:
+            print(post_content, flush=True)
             print("[FAIL] Content too short.", flush=True)
             sys.exit(1)
 
