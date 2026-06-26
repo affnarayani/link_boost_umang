@@ -1,14 +1,14 @@
 {
-    "title": "Smart contracts on blockchain - their legal enforceability in India",
-    "p1": "Can a line of code replace a legal contract in India?\nMany assume smart contracts are automatically legally enforceable just because they run on blockchain. That belief is more common than you’d expect among founders and tech teams.",
-    "p2": "Reality: In India, a smart contract is not automatically a “legal contract.” The Indian Contract Act, 1872 still applies. For enforceability, key elements like offer, acceptance, lawful consideration, and intention to create legal relations must exist. Code executing on blockchain alone doesn’t satisfy these conditions in many cases.",
-    "p3": "Think of it like this: blockchain can automate execution, but law validates agreements. Courts in India typically look at traditional contract principles, not just code. However, digital signatures and electronic records are recognized under the IT Act, which can support hybrid smart contracts linked to off-chain legal agreements. Practical takeaway: treat smart contracts as execution tools, not replacements for legal contracts. Always pair code with a legally drafted agreement for real-world enforceability.",
-    "conclusion": "What should matter more in India today—code that runs flawlessly, or legal drafting that ensures enforceability when disputes reach court?",
+    "title": "Probate vs letters of administration - when each is actually required",
+    "p1": "Most people think probate is just paperwork after someone dies.\nIt isn’t.\n\nWhat actually happens depends on one detail most people miss.",
+    "p2": "A common misunderstanding is that probate and letters of administration are interchangeable. They’re not.\n\nProbate applies when there is a valid will naming an executor.\nLetters of administration apply when there is no will, and the court appoints someone to manage the estate.\n\nWhat surprises many people: without a will, you don’t ‘choose’ who handles things—the court does.",
+    "p3": "Both processes are the court’s way of giving legal authority to deal with assets like bank accounts, property, and debts.\n\nThe practical difference changes everything: timing, paperwork, and even who gets control.\n\nIf there’s a will, ensure the executor is ready. If there isn’t, expect additional steps before anything can be accessed or distributed.",
+    "conclusion": "When dealing with an estate, did you assume probate always applies, or did you know letters of administration could be the deciding factor?",
     "keywords": [
-        "smartcontracts",
-        "blockchain",
-        "india",
-        "contractlaw",
-        "legaltech"
+        "probate",
+        "lettersofadministration",
+        "estateplanning",
+        "inheritance",
+        "legalprocess"
     ]
 }
