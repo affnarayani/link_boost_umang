@@ -83,7 +83,7 @@ def run():
 
         # 4. LOCATE TEXTBOX
         print("[STEP] Locating comment text editor input...", flush=True)
-        comment_box = page.locator('.comments-comment-box-comment__text-editor')
+        comment_box = page.get_by_role("textbox", name="Text editor for creating comment").first
         comment_box.wait_for(state="visible", timeout=60000)
         comment_box.click()
         custom_random_wait(2, 4)
