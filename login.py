@@ -119,7 +119,7 @@ def login_and_get_context(is_headless: bool = HEADLESS):
         page.goto(HOME_URL)
         
         try:
-            page.get_by_role("button", name="Me", exact=True).wait_for(state="visible", timeout=10000)
+            page.get_by_role("button", name="Me", exact=True).wait_for(state="visible", timeout=60000)
             print("[Cookie] Login successful.", flush=True)
             return pw, browser, context, page
         except:
@@ -134,9 +134,6 @@ def login_and_get_context(is_headless: bool = HEADLESS):
     page.goto(LOGIN_URL)
     page.get_by_role("textbox", name="Email or phone").fill(email)
     page.get_by_role("textbox", name="Password").fill(password)
-
-    # if page.locator("#rememberMeOptIn-checkbox").is_checked():
-    #     page.get_by_text("Keep me logged in").click()
 
     page.get_by_role("button", name="Sign in", exact=True).click()
 

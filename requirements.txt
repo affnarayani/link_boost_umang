@@ -1,16 +1,5 @@
-# --- Web Automation ---
-playwright==1.42.0
-pytest-playwright==0.4.4
-playwright-stealth
-
-# --- AI & Text Processing (g4f) ---
-g4f
-curl_cffi==0.6.2
-huggingface_hub
+playwright
 requests
-
-# --- Security & Encryption ---
-cryptography==42.0.5
-
-# --- Utilities & Environment ---
-python-dotenv==1.0.1
+python-dotenv
+cryptography
+playwright-stealth
