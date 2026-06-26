@@ -349,30 +349,67 @@ def run():
         for attempt in range(1, MAX_RETRIES + 1):
             print(f"[STEP] Waiting for image generation... Attempt {attempt}/{MAX_RETRIES}", flush=True)
             custom_random_wait(30, 60)
+            
+            # --- START: MODIFIED LOGIC FOR PREFERENCE HANDLING ---
+            img1_better = page.get_by_role('button', name='Image 1 is better')
+            img2_better = page.get_by_role('button', name='Image 2 is better')
+            skip_btn = page.get_by_role('button', name='Skip')
+            
+            p_img1 = img1_better.count() > 0
+            p_img2 = img2_better.count() > 0
+            
+            # Agar dono buttons dikh rahe hai
+            if p_img1 and p_img2:
+                print(f"[INFO] Feedback required! 'Image 1 is better' and 'Image 2 is better' both found.", flush=True)
+                choice = random.choice([img1_better, img2_better])
+                print(f"[STEP] Selecting preference button randomly...", flush=True)
+                choice.first.click()
+                print(f"[OK] Clicked preference button. Waiting 30-60 seconds...", flush=True)
+                custom_random_wait(30, 60)
+                # Ab loop ko age badhne do agle logic check ke liye
+            
+            # Agar sirf Image 1 button dikh raha hai
+            elif p_img1:
+                print(f"[INFO] Feedback required! 'Image 1 is better' found. Clicking it explicitly...", flush=True)
+                img1_better.first.click()
+                print(f"[OK] Clicked 'Image 1 is better'. Waiting 30-60 seconds...", flush=True)
+                custom_random_wait(30, 60)
+                # Ab loop ko age badhne do agle logic check ke liye
+                
+            # Agar sirf Image 2 button dikh raha hai
+            elif p_img2:
+                print(f"[INFO] Feedback required! 'Image 2 is better' found. Clicking it explicitly...", flush=True)
+                img2_better.first.click()
+                print(f"[OK] Clicked 'Image 2 is better'. Waiting 30-60 seconds...", flush=True)
+                custom_random_wait(30, 60)
+                # Ab loop ko age badhne do agle logic check ke liye
+                
+            # Agar teeno me se upar wale dono nahi mile toh 'Skip' check karo
+            elif skip_btn.count() > 0:
+                print(f"[INFO] Feedback required! 'Skip' button found. Clicking it explicitly...", flush=True)
+                skip_btn.first.click()
+                print(f"[OK] Clicked 'Skip'. Waiting 30-60 seconds...", flush=True)
+                custom_random_wait(30, 60)
+                # Ab loop ko age badhne do agle logic check ke liye
+                
+            # Agar teeno button nahi mile (Original logic for feedback which may be single choice sometimes)
+            else:
+                print(f"[INFO] No preference buttons found yet.", flush=True)
+                # Agar share button dikhta hai toh check karo as per original logic fallback
+                try:
+                    locator = page.get_by_role('button', name='Share this image').first
+                    if locator.is_visible():
+                        share_button = locator
+                        found_share = True
+                        print("✅ 'Share this image' button located successfully!", flush=True)
+                        break
+                except Exception as loc_err:
+                    print(f"[INFO] Share locator exception: {loc_err}", flush=True)
+            
+            # print(f"[WARNING] Share button not visible on attempt {attempt}. Retrying...", flush=True)
+            # Retrying comment removed as per logic change...
 
-            try:
-                feedback_buttons = page.get_by_test_id('paragen-prefer-response-button')
-                if feedback_buttons.first.is_visible():
-                    count = feedback_buttons.count()
-                    print(f"[INFO] Feedback required! Found {count} preference buttons.", flush=True)
-                    chosen_index = random.choice([0, 1]) if count >= 2 else 0
-                    print(f"[STEP] Selecting response index: {chosen_index}", flush=True)
-                    feedback_buttons.nth(chosen_index).click()
-                    custom_random_wait(15, 30)
-            except Exception as feedback_err:
-                print(f"[INFO] No feedback buttons found or single image generated", flush=True)
-            
-            try:
-                locator = page.get_by_role('button', name='Share this image').first
-                if locator.is_visible():
-                    share_button = locator
-                    found_share = True
-                    print("✅ 'Share this image' button located successfully!", flush=True)
-                    break
-            except Exception as loc_err:
-                print(f"[INFO] Share locator exception: {loc_err}", flush=True)
-            
-            print(f"[WARNING] Share button not visible on attempt {attempt}. Retrying...", flush=True)
+        # --- END: MODIFIED LOGIC FOR PREFERENCE HANDLING ---
 
         if not found_share or not share_button:
             print("❌ Error: 'Share this image' button not found after 5 retries. Exiting program.", flush=True)
