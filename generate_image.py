@@ -135,10 +135,10 @@ def load_cookies(file_path: Path) -> List[Dict[str, Any]]:
 # NEW: VALIDATION & STATUS UPDATERS
 # ==================================
 def can_run_image_script() -> tuple:
-    print("[STEP] Checking status in umang_linkedin_topics.json...", flush=True)
-    topics_file = Path("umang_linkedin_topics.json")
+    print("[STEP] Checking status in priyanka_linkedin_topics.json...", flush=True)
+    topics_file = Path("priyanka_linkedin_topics.json")
     if not topics_file.exists():
-        print("[INFO] 'umang_linkedin_topics.json' nahi mili. Execution stopped.", flush=True)
+        print("[INFO] 'priyanka_linkedin_topics.json' nahi mili. Execution stopped.", flush=True)
         return False, None
     
     try:
@@ -175,8 +175,8 @@ def can_run_image_script() -> tuple:
 
 
 def update_image_status_in_json(topic_text: str):
-    print("[STEP] Updating image status in umang_linkedin_topics.json...", flush=True)
-    topics_file = Path("umang_linkedin_topics.json")
+    print("[STEP] Updating image status in priyanka_linkedin_topics.json...", flush=True)
+    topics_file = Path("priyanka_linkedin_topics.json")
     if not topics_file.exists():
         return
         
@@ -190,7 +190,7 @@ def update_image_status_in_json(topic_text: str):
             
     with topics_file.open("w", encoding="utf-8") as f:
         json.dump(topics, f, indent=4, ensure_ascii=False)
-    print("[OK] Image status successfully updated (image_generated=True) in umang_linkedin_topics.json", flush=True)
+    print("[OK] Image status successfully updated (image_generated=True) in priyanka_linkedin_topics.json", flush=True)
 
 
 # =========================
@@ -269,7 +269,7 @@ def run():
         print("[OK] Cookies added successfully", flush=True)
 
         # Optimized Image Prompt tailored for high-conversion LinkedIn feed visuals
-        prompt = (f"""
+        prompt = ("""
         Create image for a LinkedIn post with title: "{post_title}". Image must in the ratio 1:1. This will be a hero image to this LinkedIn post. Image must be engaging. The core idea of the image must revolve around these keywords: {post_keywords}
         """)
 
@@ -282,6 +282,12 @@ def run():
 
         print("[STEP] Performing initial random wait (30-60 seconds)...", flush=True)
         custom_random_wait(30, 60)
+
+        open_button = page.get_by_test_id("existing-workspace-row").get_by_role("button", name="Open")
+        if open_button.is_visible():
+            open_button.click()
+            print("[STEP] Open button par click kar diya gaya.", flush=True)
+            custom_random_wait(30, 60)
 
         # CHECK LOGIN SUCCESS VIA USER PROFILE BUTTON
         print("[STEP] Checking login success via profile button...", flush=True)
@@ -300,7 +306,7 @@ def run():
         # Locate chat box and type prompt
         print("[STEP] Locating chat textbox...", flush=True)
         chat_box = page.get_by_role('textbox', name='Chat with ChatGPT')
-        
+
         if chat_box.count() == 0:
             print("[INFO] Fallback 1: Searching for 'Describe or edit an image' paragraph inside textbox context...", flush=True)
             chat_box = page.locator('div[contenteditable="true"]').filter(has=page.locator('p', has_text='Describe or edit an image')).first
@@ -315,32 +321,9 @@ def run():
         else:
             raise RuntimeError("❌ Textbox locator load nahi ho paya (All strategies failed).")
         
-        if page.get_by_role('button', name='Create an image').count() > 0:
-            page.get_by_role('button', name='Create an image').click()
-            print("[OK] Create image selected.", flush=True)
-            custom_random_wait(3, 6)
-        else:
-            print("[INFO] Create image button not found, skipping...", flush=True)
-
-        # Locate chat box again for the core prompt
-        print("[STEP] Locating chat textbox...", flush=True)
-        chat_box = page.get_by_role('textbox', name='Chat with ChatGPT')
-        
-        if chat_box.count() == 0:
-            print("[INFO] Fallback 1: Searching for 'Ask anything' paragraph inside textbox context...", flush=True)
-            chat_box = page.locator('div[contenteditable="true"]').filter(has=page.locator('p', has_text='Ask anything')).first
-            
-        if chat_box.count() == 0:
-            print("[INFO] Fallback 2: Searching via CSS Selector '#prompt-textarea'...", flush=True)
-            chat_box = page.locator('#prompt-textarea')
-
-        if chat_box.count() > 0:
-            chat_box.first.click()
-            print("[OK] Textbox located and clicked successfully.", flush=True)
-        else:
-            raise RuntimeError("❌ Textbox locator load nahi ho paya (All strategies failed).")
-        
-        prompt_text = (f"{prompt}")
+        formatted_base = prompt.format(post_title=post_title, post_keywords=post_keywords)
+        clean_base_prompt = " ".join(formatted_base.split())
+        prompt_text = clean_base_prompt
         print(f"[STEP] Filling prompt: '{prompt_text}'", flush=True)
         chat_box.first.type(prompt_text)
         custom_random_wait(6, 12)
@@ -422,10 +405,31 @@ def run():
             if 'page' in locals() and page:
                 try:
                     screenshot_path = "error_screenshot.png"
+                    # Playwright full page screenshot
                     page.screenshot(path=screenshot_path, full_page=True)
                     print(f"[OK] Error screenshot captured: {screenshot_path}", flush=True)
+                    
+                    # --- ImgBB Upload Logic Starts Here ---
+                    imgbb_key = os.getenv("IMGBBB_API_KEY")
+                    if imgbb_key:
+                        print("[OK] Uploading screenshot to ImgBB...", flush=True)
+                        url = f"https://api.imgbb.com/1/upload?expiration=86400&key={imgbb_key}"
+                        
+                        with open(screenshot_path, "rb") as file:
+                            response = requests.post(url, files={"image": file})
+                        
+                        if response.status_code == 200:
+                            res_data = response.json()
+                            direct_url = res_data["data"]["display_url"]
+                            print("\n" + "="*50, flush=True)
+                            print(f"👉 DIRECT SCREENSHOT LINK: {direct_url}", flush=True)
+                            print("="*50 + "\n", flush=True)
+                        else:
+                            print(f"[WARNING] ImgBB Upload Failed Status: {response.status_code}", flush=True)
+                    else:
+                        print("[WARNING] IMGBBB_API_KEY environment variable not found.", flush=True)
                 except Exception as screenshot_err:
-                    print(f"[WARNING] Could not capture screenshot: {screenshot_err}", flush=True)
+                    print(f"[WARNING] Could not capture or upload screenshot: {screenshot_err}", flush=True)
             sys.exit(1)
 
         # ========================================================
@@ -578,6 +582,34 @@ def run():
                 
             except Exception as download_err:
                 print(f"❌ Error during 'Save' button download processing: {download_err}", flush=True)
+                if 'page' in locals() and page:
+                    try:
+                        screenshot_path = "error_screenshot.png"
+                        # Playwright full page screenshot
+                        page.screenshot(path=screenshot_path, full_page=True)
+                        print(f"[OK] Error screenshot captured: {screenshot_path}", flush=True)
+                        
+                        # --- ImgBB Upload Logic Starts Here ---
+                        imgbb_key = os.getenv("IMGBBB_API_KEY")
+                        if imgbb_key:
+                            print("[OK] Uploading screenshot to ImgBB...", flush=True)
+                            url = f"https://api.imgbb.com/1/upload?expiration=86400&key={imgbb_key}"
+                            
+                            with open(screenshot_path, "rb") as file:
+                                response = requests.post(url, files={"image": file})
+                            
+                            if response.status_code == 200:
+                                res_data = response.json()
+                                direct_url = res_data["data"]["display_url"]
+                                print("\n" + "="*50, flush=True)
+                                print(f"👉 DIRECT SCREENSHOT LINK: {direct_url}", flush=True)
+                                print("="*50 + "\n", flush=True)
+                            else:
+                                print(f"[WARNING] ImgBB Upload Failed Status: {response.status_code}", flush=True)
+                        else:
+                            print("[WARNING] IMGBBB_API_KEY environment variable not found.", flush=True)
+                    except Exception as screenshot_err:
+                        print(f"[WARNING] Could not capture or upload screenshot: {screenshot_err}", flush=True)
                 sys.exit(1)
             shared_page.close()
         else:
@@ -593,10 +625,31 @@ def run():
         if 'page' in locals() and page:
             try:
                 screenshot_path = "error_screenshot.png"
+                # Playwright full page screenshot
                 page.screenshot(path=screenshot_path, full_page=True)
                 print(f"[OK] Error screenshot captured: {screenshot_path}", flush=True)
+                
+                # --- ImgBB Upload Logic Starts Here ---
+                imgbb_key = os.getenv("IMGBBB_API_KEY")
+                if imgbb_key:
+                    print("[OK] Uploading screenshot to ImgBB...", flush=True)
+                    url = f"https://api.imgbb.com/1/upload?expiration=86400&key={imgbb_key}"
+                    
+                    with open(screenshot_path, "rb") as file:
+                        response = requests.post(url, files={"image": file})
+                    
+                    if response.status_code == 200:
+                        res_data = response.json()
+                        direct_url = res_data["data"]["display_url"]
+                        print("\n" + "="*50, flush=True)
+                        print(f"👉 DIRECT SCREENSHOT LINK: {direct_url}", flush=True)
+                        print("="*50 + "\n", flush=True)
+                    else:
+                        print(f"[WARNING] ImgBB Upload Failed Status: {response.status_code}", flush=True)
+                else:
+                    print("[WARNING] IMGBBB_API_KEY environment variable not found.", flush=True)
             except Exception as screenshot_err:
-                print(f"[WARNING] Could not capture screenshot: {screenshot_err}", flush=True)
+                print(f"[WARNING] Could not capture or upload screenshot: {screenshot_err}", flush=True)
         sys.exit(1)
 
     finally:
