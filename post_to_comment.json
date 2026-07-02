@@ -1,4 +1,5 @@
 {
     "url": "https://www.linkedin.com/posts/beyond-black-box-ai-a-better-approach-to-ugcPost-7470486611437326336-B5-C/",
-    "content": "AI in legal workflows must be explainable. \n\nGovernment agencies can't afford \"black box\" decisions when investigations, litigation, and regulatory response are on the line.\n\nDiscover how purpose-built AI delivers defensible, auditable results — at scale."
+    "content": "AI in legal workflows must be explainable. \n\nGovernment agencies can't afford \"black box\" decisions when investigations, litigation, and regulatory response are on the line.\n\nDiscover how purpose-built AI delivers defensible, auditable results — at scale.",
+    "comment": "Explainability also hinges on versioning models, prompts, and datasets; in legal use cases, reproducibility after vendor updates is often the harder audit requirement than the explanation itself."
 }
