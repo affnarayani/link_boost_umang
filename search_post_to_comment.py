@@ -59,9 +59,18 @@ def run():
 
     try:
         linkedin_url = "https://www.linkedin.com/feed/"
-        page.goto(linkedin_url, wait_until="load")
-        
+        page.goto(linkedin_url, wait_until="load")      
         custom_random_wait(6, 12)
+
+        print("[STEP] Changing feed sort to Recent...", flush=True)
+        try:
+            page.get_by_role("button", name=re.compile(r"Sort by: Top", re.IGNORECASE)).click()
+            custom_random_wait(6, 12)
+            page.get_by_text("Recent", exact=True).click()
+            print("[INFO] Feed sorted to Recent...", flush=True)
+            custom_random_wait(6, 12)
+        except Exception as sort_e:
+            print(f"[INFO] Sort option change nahi ho paya (ya already Recent hai): {sort_e}", flush=True)
 
         # 3. Locate and click control menu
         print("[STEP] Locating control menu for the first post...", flush=True)
@@ -70,9 +79,17 @@ def run():
         custom_random_wait(6, 12)
 
         # 4. Click 'Copy link to post'
-        print("[STEP] Clicking 'Copy link to post'...", flush=True)
-        page.get_by_text("Copy link to post").click()
-        custom_random_wait(6, 12)
+        if page.get_by_text("Copy link to post").is_visible():
+            print("[STEP] Clicking 'Copy link to post'...", flush=True)
+            page.get_by_text("Copy link to post").click()
+            custom_random_wait(6, 12)
+        elif page.get_by_text("Not interested").is_visible():
+            print("[STEP] 'Copy link to post' not found. Clicking 'Not interested' and exiting...", flush=True)
+            page.get_by_text("Not interested").click()
+            sys.exit(1)
+        else:
+            print("[ERROR] Neither 'Copy link to post' nor 'Not interested' was found.", flush=True)
+            sys.exit(1)
 
         # 5. Read clipboard
         raw_url = page.evaluate("navigator.clipboard.readText()")
