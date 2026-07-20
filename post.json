@@ -1,14 +1,14 @@
 {
-    "title": "Mandatory reporting obligations that institutions routinely ignore",
-    "p1": "Many institutions believe silence protects them. Sometimes, the law sees silence as a failure.\n\nA hidden compliance risk is not what an organisation does — it is what it chooses not to report.",
-    "p2": "A common misconception is that reporting obligations apply only when there is proven wrongdoing. In reality, many laws require certain institutions to report specific situations, concerns, or information within a defined time.\n\nThe surprising part: failing to report can sometimes create liability even when the institution was not directly involved in the original incident.",
-    "p3": "Mandatory reporting rules exist because institutions often act as the first line of protection. Schools, financial entities, employers, and other organisations may have duties to escalate concerns instead of handling everything internally.\n\nThe practical lesson is simple: a compliance checklist should not only ask, \"What actions must we take?\" It should also ask, \"What must we report, and when?\"\n\nIgnoring a reporting duty can turn a manageable issue into a much bigger legal and reputational problem.",
-    "conclusion": "Do you think institutions ignore mandatory reporting duties because of lack of awareness, fear of consequences, or a desire to avoid scrutiny?",
+    "title": "Who's accountable when an AI chatbot gives wrong legal advice",
+    "p1": "A person follows AI-generated legal advice, loses money, and asks: “Who is responsible for this mistake?”\n\nThe answer is not as simple as blaming the chatbot.",
+    "p2": "Many people assume that if an AI gives an incorrect legal answer, the AI company automatically carries the liability. But legal responsibility usually depends on how the tool was used, the warnings provided, and whether a human professional was involved.\n\nA surprising point: AI chatbots do not act like licensed lawyers. They generate responses based on patterns in data, but they do not truly understand facts, emotions, or the consequences of a decision.",
+    "p3": "For users, the practical lesson is simple: AI can help explain legal concepts, prepare questions, or organize information, but high-stakes decisions need human legal judgment.\n\nFor businesses building AI tools, transparency, safety measures, and clear limits are becoming critical parts of responsible technology use.",
+    "conclusion": "If an AI chatbot gives wrong legal advice, should accountability fall on the user, the AI company, or the human professional who relied on it?",
     "keywords": [
-        "Compliance",
+        "AI",
+        "LegalTechnology",
+        "ArtificialIntelligence",
         "LegalAwareness",
-        "CorporateGovernance",
-        "RiskManagement",
-        "RegulatoryCompliance"
+        "FutureOfWork"
     ]
 }
