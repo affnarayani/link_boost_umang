@@ -270,7 +270,7 @@ def run():
 
         # Optimized Image Prompt tailored for high-conversion LinkedIn feed visuals
         prompt = ("""
-        Create image for a LinkedIn post with title: "{post_title}". Image must in the ratio 1:1. This will be a hero image to this LinkedIn post. Image must be engaging. The core idea of the image must revolve around these keywords: {post_keywords}
+        Create image for a LinkedIn post with title: "{post_title}". Image must in the ratio 1:1. This will be a hero image to this LinkedIn post. Image must be engaging. The core idea of the image must revolve around these keywords: {post_keywords}. Output only the final image directly.
         """)
 
         print("[STEP] Opening ChatGPT Main URL...", flush=True)
