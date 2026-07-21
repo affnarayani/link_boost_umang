@@ -5,7 +5,7 @@ import time
 import random
 import requests
 from pathlib import Path
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional, Tuple
 from dotenv import load_dotenv
 
 from playwright.sync_api import sync_playwright
@@ -15,18 +15,122 @@ from login import login_and_get_context
 # =========================
 # CONFIG
 # =========================
-HEADLESS = True
+HEADLESS = True  
 STATUS_FILE = Path("comment_status.json")
 POST_DATA_FILE = Path("post_to_comment.json")
 COMMENTED_FILE = Path("commented.json")
 
 # =========================
-# DYNAMIC WAITS
+# DYNAMIC WAITS & SCROLL
 # =========================
-def custom_random_wait(min_sec, max_sec):
+def custom_random_wait(min_sec: float, max_sec: float):
     seconds = random.uniform(min_sec, max_sec)
     print(f"[WAIT] Sleeping for {seconds:.2f} seconds...", flush=True)
     time.sleep(seconds)
+
+def slow_scroll_to_bottom(page, step_pixels: int = 250, delay_sec: float = 0.4):
+    """
+    Dheere-dheere page ke bottom tak scroll karta hai taaki post elements load ho sakein.
+    """
+    print("[STEP] Dheere-dheere page scroll down kar rahe hain...", flush=True)
+    
+    while True:
+        current_scroll = page.evaluate("window.scrollY")
+        total_height = page.evaluate("document.body.scrollHeight - window.innerHeight")
+        
+        page.mouse.wheel(0, step_pixels)
+        time.sleep(delay_sec)
+        
+        new_scroll = page.evaluate("window.scrollY")
+        if new_scroll == current_scroll or new_scroll >= total_height:
+            print("[OK] Page completely scroll ho gaya.", flush=True)
+            break
+
+# =========================
+# DOM DOMINANT INTERACTION HELPERS
+# =========================
+def focus_and_click_comment_box(page, max_timeout: int = 15) -> bool:
+    """
+    DOM Selectors use karke Comment Box ko locate, scroll, aur focus karta hai.
+    """
+    print("[DOM SEARCH] Locating comment box via DOM selectors...", flush=True)
+    
+    selectors = [
+        "div.ql-editor[contenteditable='true']",
+        "div[contenteditable='true'][role='textbox']",
+        "div[role='textbox']",
+        "textarea.comments-comment-box__textarea",
+        ".ql-editor"
+    ]
+    
+    start_time = time.time()
+    while time.time() - start_time < max_timeout:
+        for selector in selectors:
+            try:
+                elem = page.locator(selector).first
+                if elem.is_visible():
+                    elem.scroll_into_view_if_needed()
+                    custom_random_wait(0.5, 1.0)
+                    elem.click()
+                    
+                    # Ensure focus via JS for rich text editor
+                    page.evaluate("""
+                        (sel) => {
+                            const el = document.querySelector(sel);
+                            if (el) {
+                                el.focus();
+                                if (el.getAttribute('contenteditable') === 'true') {
+                                    const range = document.createRange();
+                                    const sel = window.getSelection();
+                                    range.selectNodeContents(el);
+                                    range.collapse(false);
+                                    sel.removeAllRanges();
+                                    sel.addRange(range);
+                                }
+                            }
+                        }
+                    """, selector)
+                    
+                    print(f"[SUCCESS] Comment box located and focused via selector: '{selector}'", flush=True)
+                    return True
+            except Exception:
+                continue
+        time.sleep(1)
+        
+    print("[ERROR] Comment box not found using DOM selectors.", flush=True)
+    return False
+
+def click_like_button(page, max_timeout: int = 10) -> bool:
+    """
+    DOM Selectors use karke 'React Like' button ko locate aur click karta hai.
+    """
+    print("[DOM SEARCH] Locating 'React Like' button via DOM selectors...", flush=True)
+    
+    selectors = [
+        "button[aria-label*='React Like']",
+        "button[aria-label*='Like']",
+        "button.react-button__trigger",
+        "button.artdeco-button:has-text('Like')",
+        "button:has-text('Like')"
+    ]
+    
+    start_time = time.time()
+    while time.time() - start_time < max_timeout:
+        for selector in selectors:
+            try:
+                btn = page.locator(selector).first
+                if btn.is_visible():
+                    btn.scroll_into_view_if_needed()
+                    custom_random_wait(0.5, 1.0)
+                    btn.click()
+                    print(f"[SUCCESS] Post liked via selector: '{selector}'", flush=True)
+                    return True
+            except Exception:
+                continue
+        time.sleep(1)
+        
+    print("[WARNING] Could not locate or click Like button via DOM selectors.", flush=True)
+    return False
 
 # =========================
 # MAIN
@@ -79,30 +183,16 @@ def run():
     try:
         # Navigate to target
         print(f"[STEP] Navigating to target post URL: {target_url}", flush=True)
-        page.goto(target_url, wait_until="load")
-        custom_random_wait(6, 12)
+        page.goto(target_url, wait_until="domcontentloaded", timeout=60000)
+        custom_random_wait(4, 8)
 
-        # 4. LOCATE TEXTBOX OR RESTRICTION
-        print("[STEP] Checking for comment box or restriction...", flush=True)
-        
-        comment_box = page.get_by_role("textbox", name="Text editor for creating comment").first
-        restricted_text = page.get_by_text('Only group members can')
+        # 4. CHECK GROUP RESTRICTION
+        print("[STEP] Checking for restriction text...", flush=True)
+        restricted_text = page.get_by_text("Only group members can")
 
-        # Wait until either the text box OR the restriction text is visible
-        try:
-            page.wait_for_function(
-                "() => document.querySelector('[role=\"textbox\"][aria-label*=\"comment\"]') || document.body.innerText.includes('Only group members can')",
-                timeout=30000
-            )
-        except Exception as e:
-            print("[ERROR] Neither comment box nor restriction text found within timeout.", flush=True)
-            raise e
-
-        # CONDITION CHECK: Agar group restriction text mil jata hai
-        if restricted_text.count() > 0 and restricted_text.is_visible():
+        if restricted_text.count() > 0 and restricted_text.first.is_visible():
             print("[INFO] 'Only group members can...' restriction text found. Treating as SUCCESS.", flush=True)
             
-            # History me URL append karein
             commented_urls = []
             if COMMENTED_FILE.exists():
                 with COMMENTED_FILE.open("r", encoding="utf-8") as f:
@@ -114,7 +204,6 @@ def run():
                 with COMMENTED_FILE.open("w", encoding="utf-8") as f:
                     json.dump(commented_urls, f, indent=4, ensure_ascii=False)
 
-            # Status ko true mark karein
             status_data["comment_posted"] = True
             with STATUS_FILE.open("w", encoding="utf-8") as f:
                 json.dump(status_data, f, indent=4, ensure_ascii=False)
@@ -122,41 +211,61 @@ def run():
             print("[STEP] Finalizing restricted post flow...", flush=True)
             custom_random_wait(5, 10)
             
-            # Status file ko clear/reset karein agle loop ke liye
             reset_status = {"post_to_comment_found": False, "comment_generated": False, "comment_posted": False}
             with STATUS_FILE.open("w", encoding="utf-8") as f:
                 json.dump(reset_status, f, indent=4, ensure_ascii=False)
                 
-            print("[SUCCESS] Heading to safe exit...", flush=True)
-            # return karne se code seedhe finally block me jayega aur browser cleanly close hoga
+            print("[SUCCESS] Exiting safely with code 0.", flush=True)
             return
 
-        # Agar restriction nahi hai, toh normal flow chalega
-        print("[STEP] Comment box found. Proceeding to type...", flush=True)
-        comment_box.click()
-        custom_random_wait(2, 4)
-        
-        print("[STEP] Typing comment...", flush=True)
-        comment_box.press_sequentially(comment_text, delay=random.uniform(60, 140), timeout=0)
-        custom_random_wait(3, 6)
+        # 5. SCROLL TO BOTTOM & LOCATE COMMENT BOX VIA DOM
+        print("[STEP] Locating comment box via DOM selectors...", flush=True)
+        slow_scroll_to_bottom(page, step_pixels=250, delay_sec=0.4)
+        custom_random_wait(2, 3)
 
-        # 5. KEYBOARD NAVIGATION
-        print("[STEP] Executing Keyboard Flow...", flush=True)
+        box_clicked = focus_and_click_comment_box(page, max_timeout=15)
+
+        if not box_clicked:
+            raise Exception("Could not locate or focus comment box via DOM selectors.")
+
+        custom_random_wait(1, 2)
+        
+        # 6. TYPE COMMENT
+        print("[STEP] Typing comment...", flush=True)
+        page.keyboard.type(comment_text, delay=70)
+        custom_random_wait(1, 2)
+
+        # Executive Input Fallback
+        page.evaluate("""
+            (text) => {
+                let active = document.activeElement;
+                if (active && (active.isContentEditable || active.getAttribute('contenteditable') === 'true')) {
+                    if (active.innerText.trim() === '') {
+                        document.execCommand('insertText', false, text);
+                        active.dispatchEvent(new Event('input', { bubbles: true }));
+                    }
+                }
+            }
+        """, comment_text)
+
+        custom_random_wait(1, 2)
+
+        # 7. SUBMIT COMMENT (3x TAB + 1x ENTER WITH RANDOM DELAYS)
+        print("[STEP] Submitting comment using Keyboard sequence (3 TABs + ENTER)...", flush=True)
         for i in range(1, 4):
             page.keyboard.press("Tab")
-            custom_random_wait(3, 6)
-            
+            print(f"[KEYBOARD] Pressed TAB ({i}/3)", flush=True)
+            custom_random_wait(1, 2)
+
         page.keyboard.press("Enter")
+        print("[KEYBOARD] Pressed ENTER to post comment.", flush=True)
         custom_random_wait(6, 12)
 
-        # 6. REACT LIKE
-        print("[STEP] Locating 'React Like' button...", flush=True)
-        like_btn = page.get_by_role('button', name='Reaction button state: no reaction', exact=True)
-        if like_btn.count() > 0:
-            like_btn.first.click()
-            print("[SUCCESS] Post liked.", flush=True)
+        # 8. CLICK LIKE BUTTON VIA DOM
+        print("[STEP] Locating 'React Like' button via DOM...", flush=True)
+        like_clicked = click_like_button(page, max_timeout=10)
 
-        # 7. APPEND TO HISTORY
+        # 9. APPEND TO HISTORY
         commented_urls = []
         if COMMENTED_FILE.exists():
             with COMMENTED_FILE.open("r", encoding="utf-8") as f:
@@ -168,7 +277,7 @@ def run():
             with COMMENTED_FILE.open("w", encoding="utf-8") as f:
                 json.dump(commented_urls, f, indent=4, ensure_ascii=False)
 
-        # 8. UPDATE STATUS
+        # 10. UPDATE STATUS
         status_data["comment_posted"] = True
         with STATUS_FILE.open("w", encoding="utf-8") as f:
             json.dump(status_data, f, indent=4, ensure_ascii=False)
@@ -210,8 +319,8 @@ def run():
                 print(f"[WARNING] Could not capture or upload screenshot: {screenshot_err}", flush=True)
         sys.exit(1)
     finally:
-        if browser: browser.close()
-        if pw: pw.stop()
+        if 'browser' in locals() and browser: browser.close()
+        if 'pw' in locals() and pw: pw.stop()
 
 if __name__ == "__main__":
     run()
