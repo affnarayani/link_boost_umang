@@ -154,8 +154,7 @@ def run():
         page.goto(trimmed_url, wait_until="load")
         custom_random_wait(6, 12)
         
-        # data-testid="expandable-text-box" ko target kar rahe hain
-        post_locator = page.locator('[data-testid="expandable-text-box"]').first
+        post_locator = page.locator('div[class*="update-components-update-v2__commentary"]').first
         post_locator.wait_for(state="visible", timeout=15000)
         post_content = post_locator.inner_text().strip()
         
