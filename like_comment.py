@@ -15,7 +15,7 @@ from login import login_and_get_context
 # =========================
 # CONFIG
 # =========================
-HEADLESS = False  
+HEADLESS = True  
 STATUS_FILE = Path("comment_status.json")
 POST_DATA_FILE = Path("post_to_comment.json")
 COMMENTED_FILE = Path("commented.json")
