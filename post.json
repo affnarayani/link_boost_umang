@@ -1,14 +1,14 @@
 {
-    "title": "How Indian courts actually apply the polluter pays principle",
-    "p1": "A company pollutes a river. Who pays for the damage?\n\nMany assume the answer is simply a fine imposed by the government. But Indian courts have taken a much broader view of the polluter pays principle.",
-    "p2": "The surprising part: courts do not treat pollution as just a violation of rules. They can make polluters pay for restoring the environment itself.\n\nThis means the cost of cleaning contaminated water, repairing ecological damage, or compensating affected communities can be placed on the person or company responsible.",
-    "p3": "The Supreme Court has repeatedly applied this principle to ensure that businesses cannot profit from activities while leaving society to bear the environmental cost.\n\nThe idea is simple: those who create environmental harm must take responsibility for fixing it.\n\nFor companies, this is more than a legal issue. Environmental compliance is becoming a core part of responsible business practices.\n\nA cleaner environment is not just a government duty; it is a shared responsibility backed by law.",
-    "conclusion": "Do you think companies causing environmental damage should pay only penalties, or should they fully fund restoration of the damage they create?",
+    "title": "Significant data fiduciary classification - who actually gets covered",
+    "p1": "Not every company handling personal data gets the same level of responsibility.\n\nBut what happens when a business becomes too big, too influential, or too risky with people’s data?",
+    "p2": "A common misconception is that only tech giants need to worry about being classified as Significant Data Fiduciaries.\n\nIn reality, the classification depends on factors like the volume of personal data processed, sensitivity of the data, impact on individuals, and risks involved. A smaller company handling highly sensitive information could attract greater scrutiny than a larger company with lower-risk processing.",
+    "p3": "A Significant Data Fiduciary is essentially an organization that requires stronger safeguards because its data practices can affect a large number of people or create greater privacy risks.\n\nSuch entities may face additional obligations, including stronger security measures, audits, and appointing responsible officers for compliance.\n\nThe key takeaway: data responsibility is not measured only by company size. It is measured by the potential impact of how personal data is collected, used, and protected.",
+    "conclusion": "Do you think data privacy rules should focus more on company size or on the potential harm caused by data misuse?",
     "keywords": [
-        "EnvironmentalLaw",
-        "PolluterPaysPrinciple",
-        "IndianJudiciary",
-        "SustainableBusiness",
-        "LegalAwareness"
+        "DataProtection",
+        "DigitalPrivacy",
+        "DPDPAct",
+        "CyberSecurity",
+        "DataGovernance"
     ]
 }
