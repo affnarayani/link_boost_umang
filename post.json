@@ -1,14 +1,14 @@
 {
-    "title": "Significant data fiduciary classification - who actually gets covered",
-    "p1": "Not every company handling personal data gets the same level of responsibility.\n\nBut what happens when a business becomes too big, too influential, or too risky with people’s data?",
-    "p2": "A common misconception is that only tech giants need to worry about being classified as Significant Data Fiduciaries.\n\nIn reality, the classification depends on factors like the volume of personal data processed, sensitivity of the data, impact on individuals, and risks involved. A smaller company handling highly sensitive information could attract greater scrutiny than a larger company with lower-risk processing.",
-    "p3": "A Significant Data Fiduciary is essentially an organization that requires stronger safeguards because its data practices can affect a large number of people or create greater privacy risks.\n\nSuch entities may face additional obligations, including stronger security measures, audits, and appointing responsible officers for compliance.\n\nThe key takeaway: data responsibility is not measured only by company size. It is measured by the potential impact of how personal data is collected, used, and protected.",
-    "conclusion": "Do you think data privacy rules should focus more on company size or on the potential harm caused by data misuse?",
+    "title": "Online matrimonial fraud - a rising category of cybercrime",
+    "p1": "The person you trust the most online may not always be who they claim to be.\n\nA growing number of cybercrime cases now begin with a simple conversation on a matrimonial platform.",
+    "p2": "Many people believe matrimonial fraud only happens when someone asks for money directly. The reality is more deceptive.\n\nFraudsters often spend weeks or months building emotional trust before creating a fake emergency, investment opportunity, or financial request. This method is known as a romance scam, where emotions become the tool for manipulation.",
+    "p3": "The biggest warning sign is not always the request for money. It is the pattern behind it — avoiding video calls, sharing inconsistent personal details, rushing commitment, or creating repeated financial problems.\n\nA simple verification step can prevent major losses: verify identity independently, avoid sharing sensitive information, and never make financial decisions based only on an online relationship.",
+    "conclusion": "Have you or someone you know encountered suspicious behavior on matrimonial platforms? What verification steps do you think everyone should follow?",
     "keywords": [
-        "DataProtection",
-        "DigitalPrivacy",
-        "DPDPAct",
-        "CyberSecurity",
-        "DataGovernance"
+        "CyberCrime",
+        "OnlineFraud",
+        "DigitalSafety",
+        "MatrimonialFraud",
+        "CyberAwareness"
     ]
 }
