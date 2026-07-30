@@ -29,7 +29,10 @@
     },
     {
         "name": "Adya Rao",
-        "profile_link": "https://www.linkedin.com/in/adya-rao-1881a721b/"
+        "profile_link": "https://www.linkedin.com/in/adya-rao-1881a721b/",
+        "sent": true,
+        "timestamp": "2026-07-30 14:58:47",
+        "withdrawn": false
     },
     {
         "name": "Adv. Sanjeet Kumar",
