@@ -205,7 +205,7 @@ def run():
 
         # CHECK FOR "This post cannot be displayed" LINK
         print("[STEP] Checking if post cannot be displayed...", flush=True)
-        cannot_displayed_locator = page.get_by_role('link', {'name': 'This post cannot be displayed'})
+        cannot_displayed_locator = page.get_by_role("link", name="This post cannot be displayed")
         if cannot_displayed_locator.count() > 0 and cannot_displayed_locator.first.is_visible():
             print("[INFO] 'This post cannot be displayed' found. Skipping to history & status update...", flush=True)
             
