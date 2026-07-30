@@ -100,5 +100,8 @@ jobs:
           else
             echo "[OK] Changes detected. Committing dynamic state..."
             git commit -m "Automated: Fresh target post state updated [skip ci]"
+            
+            # --autostash flag temporary unstaged changes ko stash karke pull karega
+            git pull origin ${GITHUB_REF_NAME} --rebase --autostash
             git push origin ${GITHUB_REF_NAME}
           fi
