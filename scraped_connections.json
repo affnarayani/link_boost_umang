@@ -120,7 +120,10 @@
     },
     {
         "name": "Rishi Raj Raman",
-        "profile_link": "https://www.linkedin.com/in/rishi-raj-raman-b3a100221/"
+        "profile_link": "https://www.linkedin.com/in/rishi-raj-raman-b3a100221/",
+        "sent": true,
+        "timestamp": "2026-07-31 10:06:54",
+        "withdrawn": false
     },
     {
         "name": "Adv. Shubham Kumar Singh",
