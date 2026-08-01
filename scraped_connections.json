@@ -232,7 +232,10 @@
     },
     {
         "name": "Shalini Bhatt",
-        "profile_link": "https://www.linkedin.com/in/shalini-bhatt-757581205/"
+        "profile_link": "https://www.linkedin.com/in/shalini-bhatt-757581205/",
+        "sent": true,
+        "timestamp": "2026-08-01 09:10:55",
+        "withdrawn": false
     },
     {
         "name": "Navneet Dubey",
