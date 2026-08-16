@@ -110,7 +110,12 @@ jobs:
             echo "[OK] Changes detected. Committing dynamic state..."
             git commit -m "Automated: Fresh target post state updated [skip ci]"
             
-            # Remote se fresh changes pull aur rebase karke push karein
+            # Baaki sabhi unstaged aur untracked files ko temporary hide karein
+            git stash --include-untracked
+            
+            # Remote changes pull karein
             git pull --rebase origin ${GITHUB_REF_NAME}
+            
+            # Clean push
             git push origin ${GITHUB_REF_NAME}
           fi
