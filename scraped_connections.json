@@ -246,7 +246,10 @@
     },
     {
         "name": "Aman Vijay",
-        "profile_link": "https://www.linkedin.com/in/aman-vijay-36bbaa219/"
+        "profile_link": "https://www.linkedin.com/in/aman-vijay-36bbaa219/",
+        "sent": true,
+        "timestamp": "2026-08-16 09:25:56",
+        "withdrawn": false
     },
     {
         "name": "Adv Shahzeb Khan",
