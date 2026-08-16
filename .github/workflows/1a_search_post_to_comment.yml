@@ -97,9 +97,11 @@ jobs:
     # COMMIT AND PUSH STATUS & PERSISTENT STATE
     # =======================================================
     - name: Commit and Push Status Changes
-      if: always() # Hamesha run hoga taaki dynamic state miss na ho
+      if: always()
       run: |
-        # Aapki script se generated exact files ko safety check ke saath stage karega
+        git config user.name "github-actions[bot]"
+        git config user.name "github-actions[bot]@users.noreply.github.com"
+
         [ -f comment_status.json ] && git add comment_status.json
         [ -f post_to_comment.json ] && git add post_to_comment.json
         [ -f commented.json ] && git add commented.json
@@ -109,10 +111,8 @@ jobs:
         else
           echo "[OK] Changes detected. Committing dynamic state..."
           git commit -m "Automated: Fresh target post state updated [skip ci]"
+          
+          # Push se pehle latest remote changes pull & rebase karein
+          git pull --rebase origin ${GITHUB_REF_NAME}
           git push origin ${GITHUB_REF_NAME}
         fi
-
-    - name: Cleanup Credentials
-      if: always()
-      run: |
-        rm -f credentials.txt client.ovpn openvpn.log || true
