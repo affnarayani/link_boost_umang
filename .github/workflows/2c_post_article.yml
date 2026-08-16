@@ -99,12 +99,18 @@ jobs:
       - name: Commit and Push updated topics state
         if: success()
         run: |
-          # Aapke project file name ke mutabik state track karna
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add umang_linkedin_topics.json
+          
           if git diff --staged --quiet; then
             echo "[INFO] No changes detected in pipeline state files. Skipping push."
           else
             echo "[OK] Changes detected. Committing dynamic state..."
             git commit -m "Automated: Fresh target post state updated [skip ci]"
+            
+            # Remote se fresh changes pull aur rebase karke push karein
+            git pull --rebase origin ${GITHUB_REF_NAME}
             git push origin ${GITHUB_REF_NAME}
           fi
