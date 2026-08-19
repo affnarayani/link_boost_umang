@@ -267,7 +267,10 @@
     },
     {
         "name": "Astha Singh",
-        "profile_link": "https://www.linkedin.com/in/astha-singh-572049206/"
+        "profile_link": "https://www.linkedin.com/in/astha-singh-572049206/",
+        "sent": true,
+        "timestamp": "2026-08-19 17:11:06",
+        "withdrawn": false
     },
     {
         "name": "Neeraj K.",
