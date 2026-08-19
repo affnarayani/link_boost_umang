@@ -2,12 +2,12 @@ name: 1A. Search Post to Comment
 
 on:
   schedule:
-    - cron: '8 8 * * *'
-    - cron: '4 18 * * *'
-    - cron: '53 19 * * *'
-    - cron: '14 18 * * *'
-    - cron: '39 2 * * *'
-    - cron: '25 18 * * *'
+    - cron: '26 2 * * *'
+    - cron: '42 15 * * *'
+    - cron: '24 12 * * *'
+    - cron: '42 16 * * *'
+    - cron: '25 22 * * *'
+    - cron: '46 10 * * *'
   workflow_dispatch:
 
 env:
