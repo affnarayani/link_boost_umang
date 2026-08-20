@@ -344,7 +344,10 @@
     },
     {
         "name": "Simant Priyadarshi",
-        "profile_link": "https://www.linkedin.com/in/simant-priyadarshi-a79235225/"
+        "profile_link": "https://www.linkedin.com/in/simant-priyadarshi-a79235225/",
+        "sent": true,
+        "timestamp": "2026-08-20 12:02:18",
+        "withdrawn": false
     },
     {
         "name": "Karnika Jha",
