@@ -323,7 +323,10 @@
     },
     {
         "name": "Adv Himanshu Shekhar",
-        "profile_link": "https://www.linkedin.com/in/adv-himanshu-shekhar-6812abb4/"
+        "profile_link": "https://www.linkedin.com/in/adv-himanshu-shekhar-6812abb4/",
+        "sent": true,
+        "timestamp": "2026-08-20 10:03:54",
+        "withdrawn": false
     },
     {
         "name": "Rajiv Nayan Singh",
