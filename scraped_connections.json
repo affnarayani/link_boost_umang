@@ -295,7 +295,10 @@
     },
     {
         "name": "Adv Rahul Anand",
-        "profile_link": "https://www.linkedin.com/in/adv-rahul-anand-8342681aa/"
+        "profile_link": "https://www.linkedin.com/in/adv-rahul-anand-8342681aa/",
+        "sent": true,
+        "timestamp": "2026-08-20 04:06:41",
+        "withdrawn": false
     },
     {
         "name": "Ranvir Pratap Singh",
