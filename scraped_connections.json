@@ -316,7 +316,10 @@
     },
     {
         "name": "Adv. Zeeshan Khan",
-        "profile_link": "https://www.linkedin.com/in/adv-zeeshan-khan-4099a23b2/"
+        "profile_link": "https://www.linkedin.com/in/adv-zeeshan-khan-4099a23b2/",
+        "sent": true,
+        "timestamp": "2026-08-20 07:14:12",
+        "withdrawn": false
     },
     {
         "name": "Adv Himanshu Shekhar",
