@@ -330,7 +330,10 @@
     },
     {
         "name": "Rajiv Nayan Singh",
-        "profile_link": "https://www.linkedin.com/in/rajiv-nayan-singh-a68188213/"
+        "profile_link": "https://www.linkedin.com/in/rajiv-nayan-singh-a68188213/",
+        "sent": true,
+        "timestamp": "2026-08-20 11:03:09",
+        "withdrawn": false
     },
     {
         "name": "Rubasha Perween",
