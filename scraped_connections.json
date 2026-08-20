@@ -351,7 +351,10 @@
     },
     {
         "name": "Karnika Jha",
-        "profile_link": "https://www.linkedin.com/in/karnika-jha-a052ba401/"
+        "profile_link": "https://www.linkedin.com/in/karnika-jha-a052ba401/",
+        "sent": true,
+        "timestamp": "2026-08-20 13:10:16",
+        "withdrawn": false
     },
     {
         "name": "Advocate Ashish Kumar",
