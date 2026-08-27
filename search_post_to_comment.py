@@ -94,7 +94,7 @@ def run():
         print("[STEP] Locating control menu for the first post...", flush=True)
         control_menu_btn = page.get_by_role("button", name=re.compile(r"Open control menu for post by.*", re.IGNORECASE)).first
         control_menu_btn.click()
-        custom_random_wait(6, 12)
+        custom_random_wait(15, 30)
 
         # 4. Click 'Copy link to post'
         if page.get_by_text("Copy link to post").is_visible():

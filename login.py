@@ -5,7 +5,7 @@ import json
 import base64
 from datetime import datetime, timezone, timedelta
 from typing import Optional, Tuple
-
+import random
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
@@ -132,9 +132,11 @@ def login_and_get_context(is_headless: bool = HEADLESS):
         raise RuntimeError("Missing EMAIL/PASSWORD in .env")
 
     page.goto(LOGIN_URL)
+    time.sleep(random.uniform(6, 12))
     page.get_by_role("textbox", name="Email or phone").fill(email)
+    time.sleep(random.uniform(6, 12))
     page.get_by_role("textbox", name="Password").fill(password)
-
+    time.sleep(random.uniform(6, 12))
     page.get_by_role("button", name="Sign in", exact=True).click()
 
     try:
