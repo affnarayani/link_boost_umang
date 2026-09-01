@@ -1,5 +1,9 @@
 name: 2C. Post Article
 
+concurrency:
+  group: global-repo-queue
+  cancel-in-progress: false
+
 on:
   workflow_dispatch: # GitHub UI se zaroorat padne par manually run karne ke liye button rahega
   workflow_run:

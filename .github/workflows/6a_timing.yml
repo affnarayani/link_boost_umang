@@ -1,5 +1,9 @@
 name: 6A. Update Workflow Timings
 
+concurrency:
+  group: global-repo-queue
+  cancel-in-progress: false
+
 on:
   schedule:
     - cron: '0 0 * * *'
@@ -7,10 +11,6 @@ on:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
-concurrency:
-  group: ci-${{ github.workflow }}
-  cancel-in-progress: false
 
 permissions:
   contents: write

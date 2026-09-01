@@ -1,5 +1,9 @@
 name: 2B. Generate Image
 
+concurrency:
+  group: global-repo-queue
+  cancel-in-progress: false
+
 on:
   workflow_dispatch: # GitHub UI se manual run karne ke liye button active rahega
   workflow_run:

@@ -1,5 +1,9 @@
 name: 1A. Search Post to Comment
 
+concurrency:
+  group: global-repo-queue
+  cancel-in-progress: false
+
 on:
   schedule:
     - cron: '13 22 * * *'

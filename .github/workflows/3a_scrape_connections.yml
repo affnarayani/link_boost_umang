@@ -1,5 +1,9 @@
 name: 3A. Scrape Connections
 
+concurrency:
+  group: global-repo-queue
+  cancel-in-progress: false
+
 on:
   workflow_dispatch:
   

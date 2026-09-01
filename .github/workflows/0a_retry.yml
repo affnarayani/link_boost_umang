@@ -1,5 +1,9 @@
 name: 0A. Retry Workflows
 
+concurrency:
+  group: global-repo-queue
+  cancel-in-progress: false
+
 on:
   schedule:
     - cron: '*/15 * * * *'

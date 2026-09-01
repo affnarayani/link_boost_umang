@@ -1,5 +1,9 @@
 name: 1B. Generate Comment
 
+concurrency:
+  group: global-repo-queue
+  cancel-in-progress: false
+
 on: 
   workflow_dispatch: 
   workflow_run:

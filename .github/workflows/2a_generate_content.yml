@@ -1,5 +1,9 @@
 name: 2A. Generate Content
 
+concurrency:
+  group: global-repo-queue
+  cancel-in-progress: false
+
 on:
   schedule:
     # Har roz Dopahar ke 1:35 PM UTC (yaani Indian Standard Time ke hisab se Shaam 7:05 PM) par chalega
