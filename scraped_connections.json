@@ -386,7 +386,10 @@
     },
     {
         "name": "Ravi Nandan",
-        "profile_link": "https://www.linkedin.com/in/ravi-nandan-062072303/"
+        "profile_link": "https://www.linkedin.com/in/ravi-nandan-062072303/",
+        "sent": true,
+        "timestamp": "2026-09-01 04:35:57",
+        "withdrawn": false
     },
     {
         "name": "ASHISH Singh",
