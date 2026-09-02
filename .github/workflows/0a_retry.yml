@@ -16,7 +16,7 @@ jobs:
   retry-workflows:
     runs-on: ubuntu-latest
     steps:
-      - name: Check for skipped and failed workflow runs
+      - name: Check for skipped, cancelled, and failed workflow runs
         id: check-runs
         env:
           GH_TOKEN: ${{ secrets.PAT_TOKEN }}
@@ -24,7 +24,7 @@ jobs:
         run: |
           echo "Checking for previous retry workflow runs..."
           # Get all "0A. Retry Workflows" runs (regardless of conclusion)
-          RETRY_RUNS=$(gh api repos/$REPO/actions/runs --jq '.workflow_runs[] | select(.name == "0A. Retry Workflows") | {id: .id, name: .name, conclusion: .conclusion, status: .status}')
+          RETRY_RUNS=$(gh api "repos/$REPO/actions/runs?per_page=100" --jq '.workflow_runs[] | select(.name == "0A. Retry Workflows") | {id: .id, name: .name, conclusion: .conclusion, status: .status}')
           
           # Get the current run ID to avoid trying to delete it
           CURRENT_RUN_ID=${{ github.run_id }}
@@ -51,15 +51,16 @@ jobs:
             echo "No previous retry workflow runs found."
           fi
           
-          echo "Checking for skipped workflow runs..."
-          # Get all workflow runs with conclusion 'skipped'
-          SKIPPED_RUNS=$(gh api repos/$REPO/actions/runs --jq '.workflow_runs[] | select(.conclusion == "skipped") | {id: .id, name: .name}')
+          echo "Checking for skipped and cancelled workflow runs..."
+          # Get all workflow runs with conclusion 'skipped' or 'cancelled' (Clean-up only, NO retry)
+          CLEANUP_RUNS=$(gh api "repos/$REPO/actions/runs?per_page=100" --jq '.workflow_runs[] | select(.conclusion == "skipped" or .conclusion == "cancelled") | {id: .id, name: .name, conclusion: .conclusion}')
           
-          if [ -n "$SKIPPED_RUNS" ]; then
-            echo "Found skipped workflow runs. Deleting them..."
-            echo "$SKIPPED_RUNS" | jq -c '.' | while read -r run; do
+          if [ -n "$CLEANUP_RUNS" ]; then
+            echo "Found skipped/cancelled workflow runs. Deleting them..."
+            echo "$CLEANUP_RUNS" | jq -c '.' | while read -r run; do
               RUN_ID=$(echo $run | jq -r '.id')
               RUN_NAME=$(echo $run | jq -r '.name')
+              CONCLUSION=$(echo $run | jq -r '.conclusion')
               
               # Skip the current run
               if [ "$RUN_ID" == "$CURRENT_RUN_ID" ]; then
@@ -67,16 +68,16 @@ jobs:
                 continue
               fi
               
-              echo "Deleting skipped workflow run: $RUN_NAME (ID: $RUN_ID)"
+              echo "Deleting $CONCLUSION workflow run: $RUN_NAME (ID: $RUN_ID)"
               gh api repos/$REPO/actions/runs/$RUN_ID -X DELETE
             done
           else
-            echo "No skipped workflow runs found."
+            echo "No skipped or cancelled workflow runs found."
           fi
           
           echo "Checking for failed workflow runs..."
-          # Get all workflow runs with conclusion 'failure'
-          FAILED_RUNS=$(gh api repos/$REPO/actions/runs --jq '.workflow_runs[] | select(.conclusion == "failure") | {id: .id, name: .name, workflow_id: .workflow_id}')
+          # Get all workflow runs with conclusion 'failure' (For delete AND retry)
+          FAILED_RUNS=$(gh api "repos/$REPO/actions/runs?per_page=100" --jq '.workflow_runs[] | select(.conclusion == "failure") | {id: .id, name: .name, workflow_id: .workflow_id}')
           
           if [ -n "$FAILED_RUNS" ]; then
             echo "Found failed workflow runs. Processing them..."
