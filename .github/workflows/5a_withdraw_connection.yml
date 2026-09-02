@@ -84,6 +84,8 @@ jobs:
         env:
           DECRYPT_KEY: ${{ secrets.DECRYPT_KEY }}
           IMGBBB_API_KEY: ${{ secrets.IMGBBB_API_KEY }}
+          EMAIL: ${{ secrets.EMAIL }}
+          PASSWORD: ${{ secrets.PASSWORD }}
         run: |
           python withdraw_connection.py
 
