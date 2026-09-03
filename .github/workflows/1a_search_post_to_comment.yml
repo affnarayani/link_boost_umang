@@ -6,12 +6,12 @@ concurrency:
 
 on:
   schedule:
-    - cron: '4 15 * * *'
-    - cron: '38 5 * * *'
-    - cron: '26 22 * * *'
-    - cron: '25 3 * * *'
-    - cron: '51 14 * * *'
-    - cron: '55 21 * * *'
+    - cron: '58 15 * * *'
+    - cron: '20 4 * * *'
+    - cron: '39 19 * * *'
+    - cron: '18 21 * * *'
+    - cron: '31 22 * * *'
+    - cron: '6 4 * * *'
   workflow_dispatch:
 
 env:
