@@ -414,7 +414,10 @@
     },
     {
         "name": "Nitin Raj",
-        "profile_link": "https://www.linkedin.com/in/nitin-raj-031063216/"
+        "profile_link": "https://www.linkedin.com/in/nitin-raj-031063216/",
+        "sent": true,
+        "timestamp": "2026-09-10 07:31:52",
+        "withdrawn": false
     },
     {
         "name": "Adv. Sumit Kr Gupta",
