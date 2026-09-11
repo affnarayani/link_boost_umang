@@ -164,6 +164,7 @@ def run():
         next_button = (
             page.get_by_test_id('interop-shadowdom').get_by_role('button', name='Next')
             .or_(page.get_by_role('button', name='Next'))
+            .or_(page.get_by_role('button', name='Next', exact=True))
         )
         next_button.click()
         step_wait()
