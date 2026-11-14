@@ -1,9 +1,5 @@
 name: 0B. Clear Workflow History
 
-concurrency:
-  group: global-repo-queue
-  cancel-in-progress: false
-
 on:
   workflow_dispatch:
 

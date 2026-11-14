@@ -1,5 +1,7 @@
-playwright
-requests
-python-dotenv
 cryptography
+google-genai>=3.3.0
+pillow
+playwright
 playwright-stealth
+python-dotenv
+requests

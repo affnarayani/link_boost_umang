@@ -1,9 +1,5 @@
 name: 6A. Update Workflow Timings
 
-concurrency:
-  group: global-repo-queue
-  cancel-in-progress: false
-
 on:
   schedule:
     - cron: '0 0 * * *'
@@ -11,6 +7,10 @@ on:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+concurrency:
+  group: ci-${{ github.workflow }}
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -53,7 +53,7 @@ jobs:
 
           git commit -m "chore: update workflow cron times from timing.py [skip ci]"
 
-          # Authentication ke liye PAT ka use
+          # Use the PAT for authentication
           git remote set-url origin https://x-access-token:${PAT_TOKEN}@github.com/${{ github.repository }}.git
 
           # Force rebase and push
